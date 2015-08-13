@@ -4,6 +4,6 @@ using namespace std;
 
 int main()
 {
-    cout << "Something else that I want to say." << endl;
+    cout << "Something else that I want to say.." << endl;
     return 0;
 }
