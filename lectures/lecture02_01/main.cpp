@@ -24,7 +24,7 @@ int main()
     cout << d << endl;
     cout.precision(20);
     cout << d << endl;
-    cout << d + 0.00000000000000001 << endl;
+    cout << d + 0.000000000000000001 << endl;
 
     cout << endl;
     return 0;
