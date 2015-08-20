@@ -17,6 +17,9 @@ int main()
     cout << b << endl;
     cout << b-1 << endl;
 
+    long long c = LONG_LONG_MAX;
+    cout << c << endl;
+
     cout << endl;
     return 0;
 }
