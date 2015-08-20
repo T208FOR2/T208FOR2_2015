@@ -4,6 +4,7 @@ using namespace std;
 
 int main()
 {
+    cout << endl;
     int a = INT_MAX;
 
     cout << a << endl << endl;
@@ -12,5 +13,10 @@ int main()
     cout << a << endl;
     cout << a + 1 << endl;
 
+    unsigned int b = 0;
+    cout << b << endl;
+    cout << b-1 << endl;
+
+    cout << endl;
     return 0;
 }
