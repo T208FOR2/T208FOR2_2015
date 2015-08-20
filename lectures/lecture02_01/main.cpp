@@ -6,7 +6,6 @@ int main()
 {
     int a,b;
     cout << "--0--" << endl;
-
     cin >> a >> b;
     cout << "--1--" << endl;
     cout << a / b << endl;
