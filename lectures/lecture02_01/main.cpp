@@ -22,6 +22,9 @@ int main()
 
     double d = 0.1;
     cout << d << endl;
+    cout.precision(20);
+    cout << d << endl;
+
 
     cout << endl;
     return 0;
