@@ -9,6 +9,7 @@ int main()
     cin >> a;
     cout << "and another number: ";
     cin >> b;
+    cout << "-------" << endl;
     cout << a << " - " << b << endl;
 
     return 0;
