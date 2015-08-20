@@ -15,10 +15,13 @@ int main()
 
     unsigned int b = 0;
     cout << b << endl;
-    cout << b-1 << endl;
+    cout << b-1 << endl << endl;
 
     long long c = LONG_LONG_MAX;
-    cout << c << endl;
+    cout << c << endl << endl;
+
+    double d = 0.1;
+    cout << d << endl;
 
     cout << endl;
     return 0;
