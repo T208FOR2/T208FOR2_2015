@@ -5,10 +5,11 @@ int main()
 {
     int a;
     cin >> a;
+    int b = 0;
 
-    while (a > 0) {
+    while (b < a) {
         cout << "hello!" << endl;
-        a = a - 1;
+        b++;
     }
 
     return 0;
