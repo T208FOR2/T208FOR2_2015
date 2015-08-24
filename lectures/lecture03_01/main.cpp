@@ -3,28 +3,18 @@ using namespace std;
 
 int main()
 {
-    int a, b;
-    cin >> a >> b;
+    int a;
+    cin >> a;
 
-    if (a == b) {
-        cout << a << endl;
+    if (a < 1000) {
+        cout << "less than 1000" << endl;
     }
-
-//    bool success = true;
-
-//    success = (a % b == 0);
-
-/*
-    if (((a % b == 0) && (a % 2 == 0) && (b >= 0)) || (a < b)) {
-        cout << "yes!" << endl;
-    }
-    else if (a == b) {
-        cout << "equal!" << endl;
+    else if (a < 100) {
+        cout << "less than 100" << endl;
     }
     else {
-        cout << "no" << endl;
+        cout << "very small" << endl;
     }
-*/
 
     return 0;
 }
