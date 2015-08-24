@@ -6,7 +6,9 @@ int main()
     int a, b;
     cin >> a >> b;
 
-    if (a % b == 0) {
+    bool success = (a % b == 0);
+
+    if (success) {
         cout << "yes!" << endl;
     }
     else {
