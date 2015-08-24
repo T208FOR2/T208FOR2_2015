@@ -4,10 +4,11 @@ using namespace std;
 
 int main()
 {
+    string texti;
     char a,b;
     cin >> a >> b;
-    a = a + 1;
-    cout << "\"" << a << "\" - \"" << b+1 << "\"" << endl;
-
+    cin >> texti;
+    cout << "\"" << a << "\" - \"" << b << "\"" << endl;
+    cout << "\"" << texti << "\"" << endl;
     return 0;
 }
