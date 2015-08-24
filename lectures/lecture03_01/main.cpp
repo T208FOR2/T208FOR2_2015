@@ -4,14 +4,10 @@ using namespace std;
 
 int main()
 {
-    int a;
-    double b;
-    cin >> b;
+    int a, b;
+    cin >> a >> b;
 
-    a = b;
-
-    cout << "double: " << b << endl;
-    cout << "int:    " << a << endl;
+    cout << a << " / " << b << " = " << a / b;
 
     return 0;
 }
