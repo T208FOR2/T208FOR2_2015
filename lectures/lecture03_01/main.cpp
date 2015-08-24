@@ -3,13 +3,15 @@ using namespace std;
 
 int main()
 {
-    int a;
-    cin >> a;
+    int a, b;
+    cin >> a >> b;
 
-    a = a + 2;
-    a += 2;
-
-    cout << a << endl;
+    if (a % b == 0) {
+        cout << "yes!" << endl;
+    }
+    else {
+        cout << "no" << endl;
+    }
 
     return 0;
 }
