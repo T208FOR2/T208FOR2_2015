@@ -9,6 +9,7 @@ int main()
     if (a = b) {
         cout << a << endl;
     }
+
 //    bool success = true;
 
 //    success = (a % b == 0);
