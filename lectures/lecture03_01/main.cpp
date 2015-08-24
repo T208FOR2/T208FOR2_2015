@@ -4,11 +4,14 @@ using namespace std;
 
 int main()
 {
-    string texti;
-    char a,b;
-    cin >> a >> b;
-    cin >> texti;
-    cout << "\"" << a << "\" - \"" << b << "\"" << endl;
-    cout << "\"" << texti << "\"" << endl;
+    int a;
+    double b;
+    cin >> b;
+
+    a = b;
+
+    cout << "double: " << b << endl;
+    cout << "int:    " << a << endl;
+
     return 0;
 }
