@@ -1,14 +1,15 @@
 #include <iostream>
-#include <string>
-#include <math.h>
 using namespace std;
 
 int main()
 {
-    int a, b;
-    cin >> a >> b;
+    int a;
+    cin >> a;
 
-    cout << a << "^" << b << " = " << pow(a,b) << endl;
+    a = a + 2;
+    a += 2;
+
+    cout << a << endl;
 
     return 0;
 }
