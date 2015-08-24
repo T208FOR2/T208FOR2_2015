@@ -8,8 +8,7 @@ int main()
     int b = 0;
 
     while (b < a) {
-        cout << "hello!" << endl;
-        b++;
+        cout << ++b << " - hello!" << endl;
     }
 
     return 0;
