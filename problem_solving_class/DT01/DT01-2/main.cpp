@@ -20,7 +20,7 @@ int main()
         summa1 += (1.0/(i*i));
         summa2 +=  j;
         j = 0.5 * j;
-        i += 1; // "i += 1" sama og "i = i + 1"
+        i += 1; // "i += 1" sama og "i = i + 1". Skoða ++ virkjann
     }
 
     cout << summa1 << endl;
