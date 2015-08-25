@@ -14,8 +14,13 @@ int main()
     cout << a << " + " << b << " = " << a + b << endl;
     cout << a << " - " << b << " = " << a - b << endl;
     cout << a << " * " << b << " = " << a * b << endl;
-    cout << a << " / " << b << " = " << a / b << endl;
-    cout << a << " % " << b << " = " << a % b << endl;
+    
+    if( b != 0)
+    {
+        cout << a << " / " << b << " = " << a / b << endl;
+        cout << a << " % " << b << " = " << a % b << endl;
+    }
+    
 
 
 
