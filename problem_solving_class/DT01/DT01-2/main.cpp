@@ -25,6 +25,23 @@ int main()
 
     cout << summa1 << endl;
     cout << summa2 << endl;
+    
+    // Önnur aðferð með forlykkju
+    
+    //upphafstillum breyturnar
+    summa1 = 0;
+    summa2 = 0;
+    j = 0.5;
+    
+    for( int k = 1 ; k < n ; k++)
+    {
+        summa1 = summa1 + (1.0 / (k*k));
+        summa2 = summa2 + j;
+        j = j * 0.5;
+    }
+    
+    cout << summa1 << endl;
+    cout << summa2 << endl;
 
 
 
