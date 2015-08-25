@@ -15,7 +15,7 @@ int main()
     cout << a << " - " << b << " = " << a - b << endl;
     cout << a << " * " << b << " = " << a * b << endl;
     
-    if( b != 0)
+    if( b != 0) // "!=" virkinn þýðir "ekki jafnt og"
     {
         cout << a << " / " << b << " = " << a / b << endl;
         cout << a << " % " << b << " = " << a % b << endl;

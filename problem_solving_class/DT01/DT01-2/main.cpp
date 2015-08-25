@@ -7,7 +7,7 @@ int main()
     int n;
     cout << "Veldu fjolda itranir" << endl;
     cin >> n;
-
+    // Notum double þar sem summur þurfa aukastafi
     double summa1 = 0.0;
     double summa2 = 0.0;
     int i = 1;
@@ -20,7 +20,7 @@ int main()
         summa1 += (1.0/(i*i));
         summa2 +=  j;
         j = 0.5 * j;
-        i += 1;
+        i += 1; // "i += 1" sama og "i = i + 1". Skoða ++ virkjann
     }
 
     cout << summa1 << endl;
@@ -35,9 +35,9 @@ int main()
     
     for( int k = 1 ; k < n ; k++)
     {
-        summa1 = summa1 + (1.0 / (k*k));
-        summa2 = summa2 + j;
-        j = j * 0.5;
+        summa1 = summa1 + (1.0 / (k*k)); // Hægt að nota += virkjann
+        summa2 = summa2 + j; // Hægt að nota += virkjann
+        j = j * 0.5; // Hægt að nota *= virkjann
     }
     
     cout << summa1 << endl;
