@@ -31,14 +31,16 @@ int main()
 
 // Function definition
 bool printtimeunits(int x, string singular, string plural) {
+    bool success = false;
+    string x = "something";
     if (x == 1) {
         cout << x << " " << singular << endl;
-        return true;
+        success = true;
     }
     else if (x > 1) {
         cout << x << " " << plural << endl;
-        return true;
+        success = true;
     }
-    return false;
+    return success;
 }
 
