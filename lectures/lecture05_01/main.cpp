@@ -16,6 +16,11 @@ int main()
 
     cin >> numberofseconds;
 
+    printtimeunits(numberofseconds / SECONDSINYEAR, "year", "years");
+    numberofseconds = numberofseconds % SECONDSINYEAR;
+
+    printtimeunits(numberofseconds / SECONDSINDAY, "day", "days");
+    numberofseconds = numberofseconds % SECONDSINDAY;
 
     return 0;
 }
