@@ -10,7 +10,7 @@ int main()
     double c;
     cin >> a >> b;
 
-    c = static_cast<double>(a) / b;
+    c = static_cast<double>(a / b);
 
     cout << a << " / " << b << " = " << c << endl;
 //    cout << "a^b = " << pow(a,b) << endl;
