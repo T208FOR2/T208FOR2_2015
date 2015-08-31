@@ -7,24 +7,24 @@ bool printtimeunits(int x, string singular, string plural);
 
 int main()
 {
-    int x;
+    int numberofseconds;
 
     const int SECONDSINYEAR = 60*60*24*365;
     const int SECONDSINDAY = 60*60*24;
     const int SECONDSINHOUR = 60*60;
     const int SECONDSINMINUTE = 60;
 
-    cin >> x;
+    cin >> numberofseconds;
 
-    printtimeunits(x / SECONDSINYEAR, "year", "years");
-    x = x % SECONDSINYEAR;
+    printtimeunits(numberofseconds / SECONDSINYEAR, "year", "years");
+    numberofseconds = numberofseconds % SECONDSINYEAR;
 
-    if (printtimeunits(x / SECONDSINDAY, "day", "days")) {
+    if (printtimeunits(numberofseconds / SECONDSINDAY, "day", "days")) {
         cout << "printing worked ok!" << endl;
     }
-    x = x % SECONDSINDAY;
+    numberofseconds = numberofseconds % SECONDSINDAY;
 
-    printtimeunits(x, "second", "seconds");
+    printtimeunits(numberofseconds, "second", "seconds");
 
     return 0;
 }
@@ -32,7 +32,6 @@ int main()
 // Function definition
 bool printtimeunits(int x, string singular, string plural) {
     bool success = false;
-    string x = "something";
     if (x == 1) {
         cout << x << " " << singular << endl;
         success = true;
