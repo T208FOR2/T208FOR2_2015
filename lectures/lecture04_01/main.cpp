@@ -5,16 +5,21 @@ using namespace std;
 int main()
 {
     int a = 0;
-    int teljari = 0;
 
-    while (a < 10 && teljari < 3) {
-        int a = 0;
+    while (true) {
+        a++;
 
-        cin >> a;
-        cout << "\"" << a << "\"" << endl;
+        if (a % 2 == 1) {
+            continue;
+        }
 
-        teljari++;
+        cout << a << endl;
+
+        if (a > 10) {
+            break;
+        }
     }
+
     cout << a << endl;
 
     return 0;
