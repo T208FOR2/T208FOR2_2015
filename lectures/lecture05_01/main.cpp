@@ -26,13 +26,15 @@ int main()
 }
 
 // Function definition
-void printtimeunits(int x, string singular, string plural) {
+bool printtimeunits(int x, string singular, string plural) {
     if (x == 1) {
         cout << x << " " << singular << endl;
+        return true;
     }
     else if (x > 1) {
         cout << x << " " << plural << endl;
+        return true;
     }
-    return;
+    return false;
 }
 
