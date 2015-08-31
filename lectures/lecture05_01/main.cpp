@@ -24,6 +24,7 @@ int main()
     }
     x = x % SECONDSINDAY;
 
+    printtimeunits(x, "second", "seconds");
 
     return 0;
 }
