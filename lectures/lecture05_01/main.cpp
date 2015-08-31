@@ -3,24 +3,27 @@
 using namespace std;
 
 // Function decleration
-void printtimeunits(int x, string singular, string plural);
+bool printtimeunits(int x, string singular, string plural);
 
 int main()
 {
-    int numberofseconds;
+    int x;
 
     const int SECONDSINYEAR = 60*60*24*365;
     const int SECONDSINDAY = 60*60*24;
     const int SECONDSINHOUR = 60*60;
     const int SECONDSINMINUTE = 60;
 
-    cin >> numberofseconds;
+    cin >> x;
 
-    printtimeunits(numberofseconds / SECONDSINYEAR, "year", "years");
-    numberofseconds = numberofseconds % SECONDSINYEAR;
+    printtimeunits(x / SECONDSINYEAR, "year", "years");
+    x = x % SECONDSINYEAR;
 
-    printtimeunits(numberofseconds / SECONDSINDAY, "day", "days");
-    numberofseconds = numberofseconds % SECONDSINDAY;
+    if (printtimeunits(x / SECONDSINDAY, "day", "days")) {
+        cout << "printing worked ok!" << endl;
+    }
+    x = x % SECONDSINDAY;
+
 
     return 0;
 }
