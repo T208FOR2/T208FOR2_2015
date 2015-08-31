@@ -2,27 +2,20 @@
 #include <string>
 using namespace std;
 
-const double PI = 3.1415926;
 
 // Function decleration
-double area(double radius);
-double area(double width, double height);
+int somefunction(int& tala1, int tala2, int& tala3);
 
 int main()
 {
-    double theradius, thewidth, theheight;
-    cin >> theradius >> thewidth >> theheight;
+    int a,b,c;
+    cin >> a >> b >> c;
 
-    cout << "Area of circle: " << area(theradius) << endl;
-    cout << "Area of box: " << area(thewidth, theheight) << endl;
+    cout << a << " " << b << " " << c << endl;
 
     return 0;
 }
 
-double area(double radius) {
-    return PI * radius * radius;
-}
+int somefunction(int& tala1, int tala2, int& tala3) {
 
-double area(double width, double height) {
-    return width * height;
 }
