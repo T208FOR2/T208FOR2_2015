@@ -10,11 +10,11 @@ int main()
 {
     int a,b,c,d;
     cin >> a >> b >> c;
-    cout << a << " " << b << " " << c << " " << d << endl;
+    cout << "MAIN: " << a << " " << b << " " << c << endl;
 
     d = somefunction(a,b,c);
 
-    cout << a << " " << b << " " << c << " " << d << endl;
+    cout << "MAIN: " << a << " " << b << " " << c << " " << d << endl;
 
     return 0;
 }
