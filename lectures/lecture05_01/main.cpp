@@ -2,44 +2,22 @@
 #include <string>
 using namespace std;
 
+const double PI = 3.1415926;
+
 // Function decleration
-bool printtimeunits(int x, string singular, string plural);
+double area(double radius);
+double area(double width, double height);
 
 int main()
 {
-    int numberofseconds;
-
-    const int SECONDSINYEAR = 60*60*24*365;
-    const int SECONDSINDAY = 60*60*24;
-    const int SECONDSINHOUR = 60*60;
-    const int SECONDSINMINUTE = 60;
-
-    cin >> numberofseconds;
-
-    printtimeunits(numberofseconds / SECONDSINYEAR, "year", "years");
-    numberofseconds = numberofseconds % SECONDSINYEAR;
-
-    if (printtimeunits(numberofseconds / SECONDSINDAY, "day", "days")) {
-        cout << "printing worked ok!" << endl;
-    }
-    numberofseconds = numberofseconds % SECONDSINDAY;
-
-    printtimeunits(numberofseconds, "second", "seconds");
 
     return 0;
 }
 
-// Function definition
-bool printtimeunits(int x, string singular, string plural) {
-    bool success = false;
-    if (x == 1) {
-        cout << x << " " << singular << endl;
-        success = true;
-    }
-    else if (x > 1) {
-        cout << x << " " << plural << endl;
-        success = true;
-    }
-    return success;
+double area(double radius) {
+    return PI * radius * radius;
 }
 
+double area(double width, double height) {
+    return width * height;
+}
