@@ -2,16 +2,9 @@
 #include <string>
 using namespace std;
 
-// Function definition
-void printtimeunits(int x, string singular, string plural) {
-    if (x == 1) {
-        cout << x << " " << singular << endl;
-    }
-    else if (x > 1) {
-        cout << x << " " << plural << endl;
-    }
-    return;
-}
+// Function decleration
+void printtimeunits(int x, string singular, string plural);
+
 int main()
 {
     int numberofseconds;
@@ -32,5 +25,14 @@ int main()
     return 0;
 }
 
-
+// Function definition
+void printtimeunits(int x, string singular, string plural) {
+    if (x == 1) {
+        cout << x << " " << singular << endl;
+    }
+    else if (x > 1) {
+        cout << x << " " << plural << endl;
+    }
+    return;
+}
 
