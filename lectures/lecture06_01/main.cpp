@@ -3,16 +3,20 @@
 
 using namespace std;
 
+const int NR = 23;
+
 int main()
 {
     ifstream theinputfile;
-    int tala;
+    int tala,i;
 
     theinputfile.open("randomtolur.txt");
 
-    theinputfile >> tala;
+    for (i = 0; i < NR; i++) {
+        theinputfile >> tala;
+    }
 
-    cout << "The first number is: " << tala << endl;
+    cout << "The " << i << "th number is: " << tala << endl;
 
     theinputfile.close();
     return 0;
