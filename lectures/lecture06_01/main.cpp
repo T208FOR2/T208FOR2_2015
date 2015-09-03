@@ -8,7 +8,7 @@ using namespace std;
 int main()
 {
     ifstream theinputfile;
-    int tala,maxtala = 0,mintala = 0,fjolditolur = 0;
+    int tala, maxtala = 0, mintala = 0, fjolditolur = 0;
     string thefilename;
 
     cout << "Please write the name of the file: ";
@@ -23,6 +23,10 @@ int main()
 
     while (theinputfile >> tala) {
         fjolditolur++;
+
+        if (maxtala < tala) {
+            maxtala = tala;
+        }
     }
 
     cout << "The file contains " << fjolditolur << " numbers." << endl;
