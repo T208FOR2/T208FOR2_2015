@@ -1,15 +1,18 @@
 #include <iostream>
 #include <fstream>
 #include <cstdlib>
+#include <string>
 
 using namespace std;
-
-const int NR = 23;
 
 int main()
 {
     ifstream theinputfile;
-    int tala,i;
+    int tala,maxtala = 0,mintala = 0,fjolditolur = 0;
+    string thefilename;
+
+    cout << "Please write the name of the file: ";
+    cin >> thefilename;
 
     theinputfile.open("xrandomtolur.txt");  // Mac
 //    theinputfile.open("c:\\Users\\eyjo\\Desktop\\randomtolur.txt"); // Windows
