@@ -13,9 +13,10 @@ int main()
     bool firstnumber = true;
 
     cout << "Please write the name of the file: ";
-    cin >> thefilename;
+//    cin >> thefilename;
 
-    theinputfile.open(thefilename.c_str());
+//    theinputfile.open(thefilename.c_str());
+    theinputfile.open("randomtolur.txt");
 
     if (theinputfile.fail()) {
         cout << "Can't open the file!" << endl;
