@@ -12,11 +12,11 @@ int main()
     string thefilename;
     bool firstnumber = true;
 
-//    cout << "Please write the name of the file: ";
-//    cin >> thefilename;
+    cout << "Please write the name of the file: ";
+    cin >> thefilename;
 
-//    theinputfile.open(thefilename.c_str());
-    theinputfile.open("randomtolur.txt");
+//    theinputfile.open("randomtolur.txt");
+    theinputfile.open(thefilename.c_str());
 
     if (theinputfile.fail()) {
         cout << "Can't open the file!" << endl;
