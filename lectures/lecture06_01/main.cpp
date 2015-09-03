@@ -12,7 +12,7 @@ int main()
     string thefilename;
     bool firstnumber = true;
 
-    cout << "Please write the name of the file: ";
+//    cout << "Please write the name of the file: ";
 //    cin >> thefilename;
 
 //    theinputfile.open(thefilename.c_str());
