@@ -1,5 +1,6 @@
 #include <iostream>
 #include <fstream>
+#include <cstdlib>
 
 using namespace std;
 
@@ -12,6 +13,10 @@ int main()
 
     theinputfile.open("xrandomtolur.txt");  // Mac
 //    theinputfile.open("c:\\Users\\eyjo\\Desktop\\randomtolur.txt"); // Windows
+    if (theinputfile.fail()) {
+        cout << "Can't open the file!" << endl;
+        exit(1);
+    }
 
     for (i = 0; i < NR; i++) {
         theinputfile >> tala;
