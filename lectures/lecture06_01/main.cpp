@@ -21,9 +21,9 @@ int main()
         exit(1);
     }
 
-    theinputfile >> tala;
-
-
+    while (theinputfile >> tala) {
+        fjolditolur++;
+    }
 
     cout << "The file contains " << fjolditolur << " numbers." << endl;
     theinputfile.close();
