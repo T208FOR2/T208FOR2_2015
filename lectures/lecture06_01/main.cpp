@@ -10,7 +10,7 @@ int main()
 
     theinputfile.open("randomtolur.txt");
 
-    cin >> tala;
+    theinputfile >> tala;
 
     cout << "The first number is: " << tala << endl;
 
