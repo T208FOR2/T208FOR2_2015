@@ -21,9 +21,11 @@ int main()
         exit(1);
     }
 
+    theinputfile >> tala;
 
 
 
+    cout << "The file contains " << fjolditolur << " numbers." << endl;
     theinputfile.close();
     return 0;
 }
