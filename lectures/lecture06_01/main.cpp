@@ -10,7 +10,7 @@ int main()
     ifstream theinputfile;
     int tala,i;
 
-    theinputfile.open("randomtolur.txt");
+    theinputfile.open("/Users/eyjo/Desktop/randomtolur.txt");
 
     for (i = 0; i < NR; i++) {
         theinputfile >> tala;
