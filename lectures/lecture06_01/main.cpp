@@ -27,8 +27,13 @@ int main()
         if (maxtala < tala) {
             maxtala = tala;
         }
+        if (mintala > tala) {
+            mintala = tala;
+        }
     }
 
+    cout << "The largest number is " << maxtala << endl;
+    cout << "The smallest number is " << mintala << endl;
     cout << "The file contains " << fjolditolur << " numbers." << endl;
     theinputfile.close();
     return 0;
