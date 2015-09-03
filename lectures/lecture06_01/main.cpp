@@ -10,6 +10,7 @@ int main()
     ifstream theinputfile;
     int tala, maxtala = 0, mintala = 0, fjolditolur = 0;
     string thefilename;
+    bool firstnumber = true;
 
     cout << "Please write the name of the file: ";
     cin >> thefilename;
@@ -24,12 +25,13 @@ int main()
     while (theinputfile >> tala) {
         fjolditolur++;
 
-        if (maxtala < tala) {
+        if (maxtala < tala || firstnumber) {
             maxtala = tala;
         }
-        if (mintala > tala) {
+        if (mintala > tala || firstnumber) {
             mintala = tala;
         }
+        firstnumber = false;
     }
 
     cout << "The largest number is " << maxtala << endl;
