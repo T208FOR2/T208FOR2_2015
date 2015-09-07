@@ -8,6 +8,7 @@ using namespace std;
 int main()
 {
     string str;
+    char c;
     ifstream infile;
     infile.open("test.txt");
     if (infile.fail()) {
@@ -15,9 +16,12 @@ int main()
         exit(1);
     }
 
-    while (infile >> str) {
-        cout << "\"" << str << "\"" << endl;
-    }
+    c = infile.get();
+    cout << "\"" << c << "\"" << endl;
+
+//    while (infile >> str) {
+//        cout << "\"" << str << "\"" << endl;
+//    }
 
     infile.close();
     return 0;
