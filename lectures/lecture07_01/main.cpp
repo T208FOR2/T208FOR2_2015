@@ -16,6 +16,10 @@ int main()
 
     takn = cin.get();
     cin.putback('X');
+    cin.putback('X');
+    cin.putback('X');
+    cin.putback('X');
+    cin.putback('X');
 
     if (isdigit(takn)) {
         cin >> tala;
