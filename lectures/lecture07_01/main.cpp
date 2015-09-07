@@ -16,8 +16,10 @@ int main()
         exit(1);
     }
 
-    c = infile.get();
-    cout << "\"" << c << "\"" << endl;
+    while ( !infile.eof() ) {
+        c = infile.get();
+        cout << "\"" << c << "\"" << endl;
+    }
 
 //    while (infile >> str) {
 //        cout << "\"" << str << "\"" << endl;
