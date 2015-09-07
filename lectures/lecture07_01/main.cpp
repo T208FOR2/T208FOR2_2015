@@ -6,6 +6,8 @@
 
 using namespace std;
 
+void clearcin();
+
 int main()
 {
     int tala;
@@ -32,5 +34,17 @@ int main()
         cout << "I have no idea what this is: " << texti << endl;
     }
 
+    clearcin();
+    cout << "Press Enter to continue." << endl;
+    cin.get();
+
     return 0;
+}
+
+void clearcin() {
+    char takn;
+    takn = cin.get();
+    while (takn != '\n') {
+        takn = cin.get();
+    }
 }
