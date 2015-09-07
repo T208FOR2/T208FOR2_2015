@@ -15,6 +15,7 @@ int main()
     cout << "Please write something:" << endl;
 
     takn = cin.get();
+    cin.putback(takn);
 
     if (isdigit(takn)) {
         cin >> tala;
