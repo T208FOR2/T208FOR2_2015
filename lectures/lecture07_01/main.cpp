@@ -2,6 +2,7 @@
 #include <string>
 #include <fstream>
 #include <cstdlib>
+#include <cctype>
 
 using namespace std;
 
@@ -13,16 +14,19 @@ int main()
 
     cout << "Please write something:" << endl;
 
-    if () {
+    takn = cin.get();
+
+    if (isdigit(takn)) {
         cin >> tala;
         cout << "You wrote a number: " << tala << endl;
     }
-    else if () {
+    else if (isalpha(takn)) {
         cin >> texti;
         cout << "You wrote some text: " << texti << endl;
     }
     else {
-        cout << "I have no idea what this is: " << endl;
+        cin >> texti;
+        cout << "I have no idea what this is: " << texti << endl;
     }
 
     return 0;
