@@ -13,7 +13,7 @@ int main()
     char c;
     ifstream infile;
 
-    // Method 1
+    cout << "---------- Method 1 ---------" << endl;
     openfile(infile, "test.txt");
     while ( !infile.eof() ) {
         c = infile.get();
@@ -21,7 +21,7 @@ int main()
     }
     infile.close();
 
-    // Method 2
+    cout << "---------- Method 2 ---------" << endl;
     openfile(infile, "test.txt");
     while (infile >> str) {
         cout << "\"" << str << "\"" << endl;
