@@ -13,7 +13,7 @@ int main()
 {
     string t = "This is something\nthat I'm writing";
     ofstream theoutputfile;
-
+    openwritefile(theoutputfile, "test2.txt");
 
     theoutput(theoutputfile, t);
     theoutput(cout, t);
