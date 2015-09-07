@@ -18,7 +18,8 @@ int main()
 
     while ( !infile.eof() ) {
         c = infile.get();
-        cout << "\"" << c << "\"" << endl;
+        cout << ">" << c << "<" << endl;
+//        cout << "\"" << c << "\"" << endl;
     }
 
 //    while (infile >> str) {
