@@ -18,6 +18,7 @@ int main()
         exit(1);
     }
 
+    theoutput(theoutputfile, t);
     theoutput(cout, t);
 
     theoutputfile.close();
