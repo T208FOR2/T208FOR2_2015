@@ -7,16 +7,13 @@ using namespace std;
 
 void theoutput(ostream& outs, string thetext);
 
+void openwritefile(ofstream& thefile, string thefilename);
+
 int main()
 {
     string t = "This is something\nthat I'm writing";
     ofstream theoutputfile;
 
-    theoutputfile.open("test.txt");
-    if (theoutputfile.fail()) {
-        cout << "can't open the file..." << endl;
-        exit(1);
-    }
 
     theoutput(theoutputfile, t);
     theoutput(cout, t);
@@ -28,3 +25,12 @@ int main()
 void theoutput(ostream& outs, string thetext) {
     outs << thetext << endl;
 }
+
+void openwritefile(ofstream& thefile, string thefilename) {
+    thefile.open(thefilename.c_str());
+    if (thefile.fail()) {
+        cout << "can't open the file: " << thefilename << endl;
+        exit(1);
+    }
+}
+
