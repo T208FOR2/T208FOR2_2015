@@ -10,16 +10,14 @@ int main()
 {
     int tala;
     string texti;
-    char takn;
+    char takn, takn2;
 
     cout << "Please write something:" << endl;
 
     takn = cin.get();
-    cin.putback('X');
-    cin.putback('X');
-    cin.putback('X');
-    cin.putback('X');
-    cin.putback('X');
+    takn2 = cin.get();
+    cin.putback(takn2);
+    cin.putback(takn);
 
     if (isdigit(takn)) {
         cin >> tala;
