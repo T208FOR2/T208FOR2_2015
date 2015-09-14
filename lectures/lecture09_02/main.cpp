@@ -13,8 +13,8 @@ int main()
         cin >> tolur[i];
     }
 
-    for (int i = 0; i < 5; i++) {
-        cout << tolur[i];
+    for (int i = 4; i >= 0; i--) {
+        cout << tolur[i] << endl;
     }
 
     return 0;
