@@ -25,8 +25,14 @@ int main()
 }
 
 void dosomething(int a[], int n) {
+    int tmp[5];
+
     for (int i = 0; i < 5; i++) {
-        a[i] = 42;
+        tmp[i] = a[i];
+    }
+
+    for (int i = 4; i >= 0; i--) {
+        a[i] = tmp[i];
     }
 }
 
