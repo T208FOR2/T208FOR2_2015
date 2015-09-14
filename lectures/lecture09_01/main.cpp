@@ -7,7 +7,7 @@ const int NUM = 10;
 
 int main()
 {
-    int a[NUM];
+    int a[NUM],i;
     string texti[3];
 
     for (int i = 0; i < NUM+1; i++) {
@@ -18,7 +18,7 @@ int main()
     texti[1] = "is";
     texti[2] = "something";
 
-    for (int i = 0; i < NUM+1; i++) {
+    for (i = 0; i < NUM+1; i++) {
         cout << "Element " << i << " = " << a[i] << endl;
     }
 
