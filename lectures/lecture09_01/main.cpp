@@ -16,9 +16,11 @@ int main()
         a[i] = i+1;
     }
 
+    char tmp = 'a';
     for (int i = 0; i < 5; i++) {
         for (int j = 0; j < 3; j++) {
-            b[i][j] = 'a';
+            b[i][j] = tmp;
+            tmp = tmp + 1;
         }
     }
 
@@ -47,7 +49,6 @@ int main()
         }
         cout << endl;
     }
-
 
     return 0;
 }
