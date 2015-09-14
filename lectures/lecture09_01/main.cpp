@@ -24,5 +24,7 @@ int main()
 
     cout << texti[0] << " - " << texti[1] << " - " << texti[2] << endl;
 
+    cout << texti[512] << endl;
+
     return 0;
 }
