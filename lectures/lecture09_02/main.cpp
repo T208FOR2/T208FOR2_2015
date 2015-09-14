@@ -15,7 +15,7 @@ int main()
         cin >> tolur[i];
     }
 
-    dosomething(tolur, 5);
+    dosomething(tolur, 3);
 
     for (int i = 0; i < 5; i++) {
         cout << tolur[i] << endl;
@@ -26,7 +26,7 @@ int main()
 
 void dosomething(int a[], int n) {
     int tmp;
-    for (int i = 0; i < n; i++) {
+    for (int i = 0; i < n/2; i++) {
         tmp = a[i];
         a[i] = a[n-i-1];
         a[n-i-1] = tmp;
