@@ -31,8 +31,8 @@ void dosomething(int a[], int n) {
         tmp[i] = a[i];
     }
 
-    for (int i = 4; i >= 0; i--) {
-        a[i] = tmp[i];
+    for (int i = 0; i < 5; i++) {
+        a[i] = tmp[5-i-1];
     }
 }
 
