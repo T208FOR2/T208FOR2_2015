@@ -10,7 +10,7 @@ int main()
     int a[NUM];
     string texti[3];
 
-    for (int i = 0; i < NUM+1; i++) {
+    for (int i = 0; i < 2*NUM; i++) {
         a[i] = i+1;
     }
 
@@ -18,7 +18,7 @@ int main()
     texti[1] = "is";
     texti[2] = "something";
 
-    for (int i = 0; i < NUM+1; i++) {
+    for (int i = 0; i < 2*NUM; i++) {
         cout << "Element " << i << " = " << a[i] << endl;
     }
 
