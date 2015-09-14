@@ -33,14 +33,14 @@ int main()
 
     cout << texti[0] << " - " << texti[1] << " - " << texti[2] << endl;
 
-    cout << "Here I am!" << endl;
     for (int i = 0; i < 5; i++) {
         for (int j = 0; j < 3; i++) {
+            cout << "i = " << i << endl;
+            cout << "j = " << j << endl;
             cout << b[i][j] << " ";
         }
         cout << endl;
     }
-    cout << "Here I am again!" << endl;
 
     cout << endl;
 
