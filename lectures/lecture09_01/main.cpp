@@ -8,7 +8,7 @@ const int NUM = 10;
 int main()
 {
     int a[NUM];
-    char b[3][3];
+    char b[5][3];
 
     string texti[3];
 
@@ -16,7 +16,7 @@ int main()
         a[i] = i+1;
     }
 
-    for (int i = 0; i < 3; i++) {
+    for (int i = 0; i < 5; i++) {
         for (int j = 0; j < 3; j++) {
             b[i][j] = 'a';
         }
@@ -31,6 +31,12 @@ int main()
     }
 
     cout << texti[0] << " - " << texti[1] << " - " << texti[2] << endl;
+
+    for (int i = 0; i < 5; i++) {
+        for (int j = 0; j < 3; j++) {
+            cout << b[i][j] << " " << endl;
+        }
+    }
 
 
     return 0;
