@@ -4,6 +4,8 @@
 
 using namespace std;
 
+void dosomething(int a[], int n);
+
 int main()
 {
     int tolur[5];
@@ -13,9 +15,17 @@ int main()
         cin >> tolur[i];
     }
 
-    for (int i = 4; i >= 0; i--) {
+    // call a function to swap the numbers
+
+    for (int i = 0; i < 5; i++) {
         cout << tolur[i] << endl;
     }
 
     return 0;
 }
+
+void dosomething(int a[], int n) {
+
+}
+
+
