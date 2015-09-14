@@ -34,9 +34,7 @@ int main()
     cout << texti[0] << " - " << texti[1] << " - " << texti[2] << endl;
 
     for (int i = 0; i < 5; i++) {
-        for (int j = 0; j < 3; i++) {
-            cout << "i = " << i << endl;
-            cout << "j = " << j << endl;
+        for (int j = 0; j < 3; j++) {
             cout << b[i][j] << " ";
         }
         cout << endl;
