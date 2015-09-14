@@ -9,7 +9,9 @@ int main()
     int tolur[5];
     cout << "Please write 5 numbers: ";
 
-    cin >> tolur;
+    for (int i = 0; i < 5; i++) {
+        cin >> tolur[i];
+    }
 
     return 0;
 }
