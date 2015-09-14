@@ -15,7 +15,7 @@ int main()
         cin >> tolur[i];
     }
 
-    // call a function to swap the numbers
+    dosomething(tolur, 5);
 
     for (int i = 0; i < 5; i++) {
         cout << tolur[i] << endl;
@@ -25,7 +25,9 @@ int main()
 }
 
 void dosomething(int a[], int n) {
-
+    for (int i = 0; i < 5; i++) {
+        a[i] = 42;
+    }
 }
 
 
