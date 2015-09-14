@@ -8,7 +8,7 @@ int main()
     int a[5];
     string texti[3];
 
-    for (int i = 0; i < 5; i++) {}
+    for (int i = 0; i < 5; i++) {
         a[i] = i+1;
     }
 
