@@ -13,5 +13,9 @@ int main()
         cin >> tolur[i];
     }
 
+    for (int i = 0; i < 5; i++) {
+        cout << tolur[i];
+    }
+
     return 0;
 }
