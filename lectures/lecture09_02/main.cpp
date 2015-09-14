@@ -25,9 +25,11 @@ int main()
 }
 
 void dosomething(int a[], int n) {
-
+    int tmp;
     for (int i = 0; i < n; i++) {
+        tmp = a[i];
         a[i] = a[n-i-1];
+        a[n-i-1] = tmp;
     }
 
 }
