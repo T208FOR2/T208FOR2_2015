@@ -14,6 +14,7 @@ int main()
     cout << t << endl;
 
     pos = t.find(leitarord);
+    cout << pos << endl;
     while (pos < t.length()) {
         fjoldi++;
         pos = t.find(leitarord, pos+leitarord.length());
