@@ -6,15 +6,12 @@ using namespace std;
 int main()
 {
     string a,b;
+    char c[100];
 
-    cin >> a >> b;
+    cin.getline(c,100);
 
-    if (a <= b) {
-        cout << a << " is before " << b << endl;
-    }
-    else {
-        cout << a << " is after " << b << endl;
-    }
+    cout << c << endl;
+
 
     return 0;
 }
