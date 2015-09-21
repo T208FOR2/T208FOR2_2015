@@ -1,5 +1,6 @@
 #include <iostream>
 #include <string>
+#include <cctype>
 
 using namespace std;
 
@@ -11,7 +12,7 @@ int main()
     cin >> fnafn >> enafn >> ar;
 
 
-    cout << fnafn[0] << enafn << ar % 100 << "@gmail.com" << endl;
+    cout << tolower(fnafn[0]) << enafn << ar % 100 << "@gmail.com" << endl;
 
     return 0;
 }
