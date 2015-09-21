@@ -12,7 +12,7 @@ int main()
     b = a;
     b[0] = '?';
 
-    cout << a << endl;
+    cout << a[4] << endl;
     cout << b << endl;
 
 
