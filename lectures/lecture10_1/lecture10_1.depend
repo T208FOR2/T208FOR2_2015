@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1442479841 source:/Users/Eyjo/Programming/T-208-FOR2/Haust2015/Fall2015/lecture10_1/main.cpp
+	<iostream>
+	<cstdlib>
+	<cmath>
+
