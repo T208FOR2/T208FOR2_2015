@@ -17,8 +17,9 @@ int main()
     while (pos < t.length()) {
         fjoldi++;
         pos = t.find(leitarord, pos+1);
+        cout << pos << endl;
     }
-
+    cout << "-------------" << endl;
     cout << fjoldi << endl;
 
     return 0;
