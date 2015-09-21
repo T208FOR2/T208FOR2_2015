@@ -12,10 +12,11 @@ int main()
     cin >> fnafn >> enafn >> ar;
 
     for (int i = 0; i < enafn.length(); i++) {
-        tolower(enafn[i]);
+        enafn[i] = tolower(enafn[i]);
     }
 
-    cout << tolower(fnafn[0]) << enafn << ar % 100 << "@gmail.com" << endl;
+    fnafn[0] = tolower(fnafn[0]);
+    cout << fnafn[0] << enafn << ar % 100 << "@gmail.com" << endl;
 
     return 0;
 }
