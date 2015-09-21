@@ -10,6 +10,8 @@ int main()
 
     cin.getline(c,100);
 
+    getline(cin, a);
+
     cout << c << endl;
 
 
