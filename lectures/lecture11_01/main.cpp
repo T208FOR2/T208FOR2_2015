@@ -7,7 +7,10 @@ int main()
 {
     string a,b;
 
-    getline(cin, a) >> b;
+    cin >> a;
+
+    b = a;
+    b[0] = '?';
 
     cout << a << endl;
     cout << b << endl;
