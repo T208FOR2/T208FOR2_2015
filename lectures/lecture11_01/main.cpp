@@ -10,10 +10,11 @@ int main()
 
     cin.getline(c,100);
 
-    getline(cin, a);
+    getline(cin, a) >> b;
 
     cout << c << endl;
     cout << a << endl;
+    cout << b << endl;
 
 
     return 0;
