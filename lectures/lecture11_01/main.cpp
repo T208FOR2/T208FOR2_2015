@@ -10,6 +10,9 @@ int main()
     cout << endl << "012345678901234567890" << endl;
     cout << takn << endl << endl;
 
+    strcpy(takn,"Goodbye!");
+    cout << takn << endl << endl;
+
 
     return 0;
 }
