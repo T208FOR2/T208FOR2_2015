@@ -13,6 +13,7 @@ int main()
     getline(cin, a);
 
     cout << c << endl;
+    cout << a << endl;
 
 
     return 0;
