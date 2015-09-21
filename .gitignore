@@ -26,3 +26,7 @@
 *.exe
 *.out
 *.app
+
+# CodeBlock and Mac stuff
+*.layout
+*.DS_Store
