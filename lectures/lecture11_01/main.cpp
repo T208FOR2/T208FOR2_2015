@@ -11,8 +11,7 @@ int main()
     cin >> fnafn >> enafn >> ar;
 
 
-
-    cout << fnafn[0] << enafn << ar << "@gmail.com" << endl;
+    cout << fnafn[0] << enafn << ar % 100 << "@gmail.com" << endl;
 
     return 0;
 }
