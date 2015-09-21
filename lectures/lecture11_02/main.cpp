@@ -14,5 +14,12 @@ int main()
 
     cout << t.find(leitarord) << endl;
 
+    if (t.find(leitarord) < t.length()) {
+        cout << "Location = " << t.find(leitarord) << endl;
+    }
+    else {
+        cout << "Can't find " << leitarord << endl;
+    }
+
     return 0;
 }
