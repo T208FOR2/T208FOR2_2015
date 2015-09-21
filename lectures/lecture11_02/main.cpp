@@ -9,11 +9,14 @@ int main()
 
     string leitarord = "the";
     int fjoldi = 0;
+    int pos;
 
     cout << t << endl;
 
-    while (t.find(leitarord) < t.length()) {
+    pos = t.find(leitarord);
+    while (pos < t.length()) {
         fjoldi++;
+        pos = t.find(leitarord, pos+1);
     }
 
     cout << fjoldi << endl;
