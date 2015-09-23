@@ -30,4 +30,4 @@
 
 # CodeBlock and Mac stuff
 *.layout
-*.DS_Store
+.DS_Store
