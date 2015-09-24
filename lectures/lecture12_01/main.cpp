@@ -13,10 +13,22 @@ int main()
 {
     string currentline;
     ifstream inputfile;
-
+    string tag;
     string t = "#TDSBreakingNews Hillary may delay presidential campaign. Makes the election that much more intense. #TantricCampaigning";
     cout << t << endl;
 
+    unsigned int hashstart, hashend;
+
+    hashstart = t.find("#");
+    while ( hashstart < t.length() ) {
+        // Fann hashtag!
+        hashend = t.find_first_of(" .,\n\"#;?!");
+
+        tag = t.substr(hashstart, hashend - hashstart);
+        cout << tag << endl;
+
+        hashstart = t.find("#", hashstart+1);
+    }
 
     /*
     openinputfile(inputfile, THEFILENAME);
