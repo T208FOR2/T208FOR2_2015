@@ -55,7 +55,12 @@ int main() {
 }
 
 int indexofelement(string tags[], int n, string newelement) {
-
+    for (int i = 0; i < n; i++) {
+        if (tags[i] == newelement) {
+            return i;
+        }
+    }
+    return -1;
 }
 
 
