@@ -47,11 +47,11 @@ int main()
 string getnexthashtag(string texti, unsigned int& pos) {
     unsigned int hashstart, hashend;
 
-    hashstart = texti.find("#", pos+1);
+    hashstart = texti.find("#", pos);
 
     if ( hashstart < texti.length() ) {
         hashend = texti.find_first_of(" .,\n\"#;?!", hashstart+1);
-        pos = hashend;
+        pos = hashstart+1;
         return texti.substr(hashstart, hashend - hashstart);
     }
     else {
