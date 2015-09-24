@@ -17,17 +17,24 @@ const string NOHASHTAG = "no hashtag";  // string constant if we don't find a ha
 const int WHITESPACE = 40;  // how far to the right the counter appears
 const int TOPCOUNT = 30;  // how many hashtags should we print
 
+// Open the input file and check if it is ok
 void openinputfile(ifstream& inputfile, string thefilename);
 
+// Get the next hashtag from a string (starting from pos + updating pos)
 string getnexthashtag(string texti, unsigned int& pos);
 
+// Returns the index of newelement in the array tags, -1 if it is not there
 int indexofelement(string tags[], int n, string newelement);
 
+// Adds newelement to tags and increases counts and numberofelements if newelement is not in tags
+// otherwise it just increases the counts for that tag
 void insertorupdatearrays(string tags[], int counts[], string newelement, int& numberofelements);
 
+// Sorting, two functions, one sorts on the int array, the other on the string array
 void insertionSort_int_dec(int array[], string tags[], int length);
 void insertionSort_str_asc(int array[], string tags[], int length);
 
+// Takes a string and turns it into lowercase, used for comparing two hashtags
 string stringtolower(string s);
 
 
