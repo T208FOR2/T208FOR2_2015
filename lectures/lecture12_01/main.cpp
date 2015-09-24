@@ -6,8 +6,14 @@
 
 using namespace std;
 
+// This program takes as input a textfile with some twitterfeed
+// The program finds all hashtags, counts them and prints out the
+// most popular hashtags used (in decreasing order).
+
+// Constants (the filename for the input file and maximum number of unique hashtags)
 const string THEFILENAME = "twitterfeed.txt";
 const int NUM = 1000;
+
 
 void openinputfile(ifstream& inputfile, string thefilename);
 string getnexthashtag(string texti, int& pos);
