@@ -14,7 +14,8 @@ int indexofelement(string tags[], int n, string newelement);
 
 int main() {
     ifstream inputfile;
-    string tag, t, index;
+    string tag, t;
+    int index;
     string hashtags[NUM];
     int hashcount[NUM];
     int numberofelements = 0;
@@ -42,7 +43,14 @@ int main() {
 
             // Add to array?
             index = indexofelement(hashtags, numberofelements, tag);
-
+            if (index == -1) {  // Add new hashtag
+                hashtags[numberofelements] = tag;
+                hashcount[numberofelements] = 1;
+                numberofelements++;
+            }
+            else {
+                hashcount[index]++;
+            }
 
 
             cout << "\"" << tag << "\"" << endl;
