@@ -59,7 +59,7 @@ int main() {
 
     insertionSort(hashcount, hashtags, numberofelements);
 
-    for (int i = 0; i < numberofelements; i++) {
+    for (int i = 0; i < 30; i++) {
         cout << hashtags[i] << " - " << hashcount[i] << endl;
     }
 
@@ -77,7 +77,7 @@ void insertionSort(int array[], string tags[], int length) {
     tmp2 = tags[i];
 
     j = i;
-    while (j > 0 && array[j - 1] > tmp) {
+    while (j > 0 && array[j - 1] < tmp) {
       array[j] = array[j - 1];
       tags[j] = tags[j - 1];
       j--;
