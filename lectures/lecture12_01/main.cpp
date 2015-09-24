@@ -18,14 +18,14 @@ int main()
     cout << t << endl;
 
     unsigned int hashstart, hashend;
-
+    cout << "--------------------" << endl;
     hashstart = t.find("#");
     while ( hashstart < t.length() ) {
         // Fann hashtag!
         hashend = t.find_first_of(" .,\n\"#;?!");
 
         tag = t.substr(hashstart, hashend - hashstart);
-        cout << tag << endl;
+        cout << "\"" << tag << "\"" << endl;
 
         hashstart = t.find("#", hashstart+1);
     }
