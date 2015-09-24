@@ -13,7 +13,8 @@ using namespace std;
 // Constants (the filename for the input file and maximum number of unique hashtags)
 const string THEFILENAME = "twitterfeed.txt";
 const int NUM = 1000;
-const string NOHASHTAG = "no hashtag";
+const string NOHASHTAG = "no hashtag";  // string constant if we don't find a hashtag
+const int WHITESPACE = 30;  // the number of spaces that should appear before the counter
 
 void openinputfile(ifstream& inputfile, string thefilename);
 
@@ -60,12 +61,19 @@ int main()
         }
     }
 
+    // If we first sort the two arrays by the hashtags (alphabetically) and
+    // then by count (decreasing) we get all tags with the same count in
+    // alphabetical order.
     insertionSort_str_asc(hashcount, hashtags, numberofelements);  // Sort by tags (alphabetically)
     insertionSort_int_dec(hashcount, hashtags, numberofelements);  // Sort by count (decreasing)
 
     for (int i = 0; i < 30; i++)   // Print out the top tags
     {
-        cout << hashtags[i] << " - " << hashcount[i] << endl;
+        cout << hashtags[i];
+        for (int j = 0; j < WHITESPACE - hashtags[i].length(); j++) {
+            cout << " ";
+        }
+        cout << " x " << hashcount[i] << endl;
     }
 
     inputfile.close();
