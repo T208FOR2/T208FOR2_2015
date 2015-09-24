@@ -13,6 +13,12 @@ int main()
 {
     string currentline;
     ifstream inputfile;
+
+    string t = "#TDSBreakingNews Hillary may delay presidential campaign. Makes the election that much more intense. #TantricCampaigning";
+    cout << t << endl;
+
+
+    /*
     openinputfile(inputfile, THEFILENAME);
 
     while (!inputfile.eof()) {
@@ -22,6 +28,7 @@ int main()
 
 
     inputfile.close();
+*/
 
     return 0;
 }
