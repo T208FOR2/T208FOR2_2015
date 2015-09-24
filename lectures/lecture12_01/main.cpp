@@ -41,7 +41,7 @@ int main() {
         hashstart = t.find("#");
         while ( hashstart < t.length() ) {
             // Fann hashtag!
-            hashend = t.find_first_of(" .,\n\"#;?!", hashstart+1);
+            hashend = t.find_first_of(" .,\n\"#;?!:'", hashstart+1);
 
             tag = t.substr(hashstart, hashend - hashstart);
 
