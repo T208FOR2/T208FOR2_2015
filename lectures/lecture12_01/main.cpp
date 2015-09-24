@@ -7,16 +7,13 @@ using namespace std;
 
 const string THEFILENAME = "twitterfeed.txt";
 
+void openinputfile(ifstream& inputfile, string thefilename);
+
 int main()
 {
     string currentline;
     ifstream inputfile;
-    inputfile.open(THEFILENAME.c_str());
-
-    if (inputfile.fail()) {
-        cout << "Can't open " << THEFILENAME << endl;
-        exit(1);
-    }
+    openinputfile(inputfile, THEFILENAME);
 
     while (!inputfile.eof()) {
         getline(inputfile, currentline);
@@ -28,3 +25,13 @@ int main()
 
     return 0;
 }
+
+void openinputfile(ifstream& inputfile, string thefilename) {
+    inputfile.open(thefilename.c_str());
+
+    if (inputfile.fail()) {
+        cout << "Can't open " << thefilename << endl;
+        exit(1);
+    }
+}
+
