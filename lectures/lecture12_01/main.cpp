@@ -24,6 +24,9 @@ int main()
         // Fann hashtag!
         hashend = t.find_first_of(" .,\n\"#;?!");
 
+        cout << "hashstart: " << hashstart << endl;
+        cout << "hashend:   " << hashend << endl;
+
         tag = t.substr(hashstart, hashend - hashstart);
         cout << "\"" << tag << "\"" << endl;
 
