@@ -22,7 +22,7 @@ int main()
     hashstart = t.find("#");
     while ( hashstart < t.length() ) {
         // Fann hashtag!
-        hashend = t.find_first_of(" .,\n\"#;?!");
+        hashend = t.find_first_of(" .,\n\"#;?!", hashstart+1);
 
         cout << "hashstart: " << hashstart << endl;
         cout << "hashend:   " << hashend << endl;
