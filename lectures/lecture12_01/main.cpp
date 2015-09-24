@@ -6,6 +6,7 @@
 using namespace std;
 
 const string THEFILENAME = "twitterfeed.txt";
+const int NUM = 1000;
 
 void openinputfile(ifstream& inputfile, string thefilename);
 string getnexthashtag(string texti, int& pos);
@@ -16,9 +17,10 @@ int main() {
     ifstream inputfile;
     string tag;
     string t;
-    cout << t << endl;
-    openinputfile(inputfile, THEFILENAME);
+    string hashtags[NUM];
+    int hashcount[NUM];
 
+    openinputfile(inputfile, THEFILENAME);
 
     unsigned int hashstart, hashend;
     cout << "--------------------" << endl;
@@ -31,9 +33,6 @@ int main() {
         while ( hashstart < t.length() ) {
             // Fann hashtag!
             hashend = t.find_first_of(" .,\n\"#;?!", hashstart+1);
-
-            cout << "hashstart: " << hashstart << endl;
-            cout << "hashend:   " << hashend << endl;
 
             tag = t.substr(hashstart, hashend - hashstart);
             cout << "\"" << tag << "\"" << endl;
