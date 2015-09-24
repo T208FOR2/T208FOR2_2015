@@ -21,20 +21,21 @@ string getnexthashtag(string texti, unsigned int& pos);
 
 int indexofelement(string tags[], int n, string newelement);
 
+void insertorupdatearrays(string tags[], int counts[], string newelement, int& numberofelements)
+
 void insertionSort(int array[], string tags[], int length);
 
 string stringtolower(string s);
 
 
-int main() {
+int main()
+{
     ifstream inputfile;
-    string tag, t;
-    int index;
-    string hashtags[NUM];
-    int hashcount[NUM];
-    int numberofelements = 0;
+    string tag, t, hashtags[NUM];
+    int hashcount[NUM], numberofelements = 0;
 
-    for (int i = 0; i < NUM; i++) {
+    for (int i = 0; i < NUM; i++)
+    {
         hashtags[i] = "";
         hashcount[i] = 0;
     }
@@ -43,21 +44,15 @@ int main() {
 
     unsigned int pos = 0;
 
-    while (!inputfile.eof()) {
+    while (!inputfile.eof())
+    {
         getline(inputfile, t);
 
         tag = getnexthashtag(t, pos);
-        while (tag != NOHASHTAG) {
+        while (tag != NOHASHTAG)
+        {
             // Add to array?
-            index = indexofelement(hashtags, numberofelements, tag);
-            if (index == -1) {  // Add new hashtag
-                hashtags[numberofelements] = tag;
-                hashcount[numberofelements] = 1;
-                numberofelements++;
-            }
-            else {
-                hashcount[index]++;
-            }
+            insertorupdatearrays(hashtags, hashcount, tag);
 
             tag = getnexthashtag(t, pos);
         }
@@ -65,7 +60,8 @@ int main() {
 
     insertionSort(hashcount, hashtags, numberofelements);
 
-    for (int i = 0; i < 30; i++) {
+    for (int i = 0; i < 30; i++)
+    {
         cout << hashtags[i] << " - " << hashcount[i] << endl;
     }
 
@@ -75,41 +71,69 @@ int main() {
 }
 
 
-string getnexthashtag(string texti, unsigned int& pos) {
+void insertorupdatearrays(string tags[], int counts[], string newelement, int& numberofelements)
+{
+    int index = indexofelement(tags, numberofelements, newelement);
+
+    if (index >= 0)  // Hashtag exists -> increase counter
+    {
+        counts[index]++;
+    }
+    else if (numberofelements < NUM)    // Add new hashtag (if there is space)
+    {
+        tags[numberofelements] = newelement;
+        counts[numberofelements] = 1;
+        numberofelements++;
+    }
+    else {  // Running out of space
+        cout << "The number of unique hashtags is more than the limit of " << NUM << endl;
+    }
+}
+
+string getnexthashtag(string texti, unsigned int& pos)
+{
     unsigned int hashstart = texti.find("#",pos);
-    if (hashstart < texti.length()) {
+    if (hashstart < texti.length())
+    {
         unsigned int hashend = texti.find_first_of(" .,\n\"#;?!:'", hashstart+1);
         pos = hashend;
         return texti.substr(hashstart, hashend - hashstart);
     }
-    else {
+    else
+    {
         return NOHASHTAG;
     }
 }
 
 
-void insertionSort(int array[], string tags[], int length) {
-  int i, j, tmp;
-  string tmp2;
+void insertionSort(int array[], string tags[], int length)
+{
+    int i, j, tmp;
+    string tmp2;
 
-  for (i = 1; i < length; i++) {
-    tmp = array[i];
-    tmp2 = tags[i];
+    for (i = 1; i < length; i++)
+    {
+        tmp = array[i];
+        tmp2 = tags[i];
 
-    j = i;
-    while (j > 0 && array[j - 1] < tmp) {
-      array[j] = array[j - 1];
-      tags[j] = tags[j - 1];
-      j--;
+        j = i;
+        while (j > 0 && array[j - 1] < tmp)
+        {
+            array[j] = array[j - 1];
+            tags[j] = tags[j - 1];
+            j--;
+        }
+        array[j] = tmp;
+        tags[j] = tmp2;
     }
-    array[j] = tmp;
-    tags[j] = tmp2;
-  }
 }
 
-int indexofelement(string tags[], int n, string newelement) {
-    for (int i = 0; i < n; i++) {
-        if (stringtolower(tags[i]) == stringtolower(newelement)) {
+int indexofelement(string tags[], int n, string newelement)
+{
+    for (int i = 0; i < n; i++)
+    {
+        if (stringtolower(tags[i]) == stringtolower(newelement))
+        {
             return i;
         }
     }
@@ -128,8 +152,10 @@ void openinputfile(ifstream& inputfile, string thefilename)
     }
 }
 
-string stringtolower(string s) {
-    for (int i = 0; i < s.length(); i++) {
+string stringtolower(string s)
+{
+    for (int i = 0; i < s.length(); i++)
+    {
         s[i] = tolower(s[i]);
     }
     return s;
