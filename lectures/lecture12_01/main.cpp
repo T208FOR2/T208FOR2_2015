@@ -13,12 +13,16 @@ using namespace std;
 // Constants (the filename for the input file and maximum number of unique hashtags)
 const string THEFILENAME = "twitterfeed.txt";
 const int NUM = 1000;
-
+const string NOHASHTAG = "no hashtag";
 
 void openinputfile(ifstream& inputfile, string thefilename);
+
 string getnexthashtag(string texti, int& pos);
+
 int indexofelement(string tags[], int n, string newelement);
+
 void insertionSort(int array[], string tags[], int length);
+
 string stringtolower(string s);
 
 
@@ -74,6 +78,20 @@ int main() {
 
     return 0;
 }
+
+
+string getnexthashtag(string texti, int& pos) {
+    unsigned int hashstart = texti.find("#",pos);
+    if (hashstart < texti.length()) {
+        unsigned int hashend = texti.find_first_of(" .,\n\"#;?!:'", hashstart+1);
+        pos = hashend;
+        return texti.substr(hashstart, hashend - hashstart);
+    }
+    else {
+        return NOHASHTAG;
+    }
+}
+
 
 void insertionSort(int array[], string tags[], int length) {
   int i, j, tmp;
