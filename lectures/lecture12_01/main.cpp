@@ -21,7 +21,7 @@ string getnexthashtag(string texti, unsigned int& pos);
 
 int indexofelement(string tags[], int n, string newelement);
 
-void insertorupdatearrays(string tags[], int counts[], string newelement, int& numberofelements)
+void insertorupdatearrays(string tags[], int counts[], string newelement, int& numberofelements);
 
 void insertionSort(int array[], string tags[], int length);
 
@@ -42,19 +42,20 @@ int main()
 
     openinputfile(inputfile, THEFILENAME);
 
-    unsigned int pos = 0;
+    unsigned int pos;
 
     while (!inputfile.eof())
     {
-        getline(inputfile, t);
+        getline(inputfile, t);  // get one line at a time from the file
 
-        tag = getnexthashtag(t, pos);
-        while (tag != NOHASHTAG)
+        pos = 0;
+        tag = getnexthashtag(t, pos);  // find the first hashtag in the line
+        while (tag != NOHASHTAG)     // while we have some hashtags...
         {
-            // Add to array?
-            insertorupdatearrays(hashtags, hashcount, tag);
+            // Add to array if tag is new, otherwise update counter
+            insertorupdatearrays(hashtags, hashcount, tag, numberofelements);
 
-            tag = getnexthashtag(t, pos);
+            tag = getnexthashtag(t, pos);  // get the next hashtag in the current line
         }
     }
 
