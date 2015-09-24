@@ -8,7 +8,7 @@ using namespace std;
 const string THEFILENAME = "twitterfeed.txt";
 
 void openinputfile(ifstream& inputfile, string thefilename);
-string getnexthashtag(string texti, unsigned int& pos);
+string getnexthashtag(string texti, int& pos);
 
 
 int main()
@@ -19,15 +19,23 @@ int main()
     string t = "#TDSBreakingNews Hillary may delay presidential campaign. Makes the election that much more intense. #TantricCampaigning";
     cout << t << endl;
 
-    unsigned int pos = 0;
-    string hashtag;
 
-    hashtag = getnexthashtag(t, pos);
-    if (hashtag != "no hash") {
-        cout << hashtag << endl;
-        hashtag = getnexthashtag(t, pos);
-    }
+ unsigned int hashstart, hashend;
+    cout << "--------------------" << endl;
 
+     hashstart = t.find("#");
+     while ( hashstart < t.length() ) {
+        // Fann hashtag!
+         hashend = t.find_first_of(" .,\n\"#;?!", hashstart+1);
+
+        cout << "hashstart: " << hashstart << endl;
+        cout << "hashend:   " << hashend << endl;
+
+         tag = t.substr(hashstart, hashend - hashstart);
+        cout << "\"" << tag << "\"" << endl;
+
+         hashstart = t.find("#", hashstart+1);
+     }
 
     /*
     openinputfile(inputfile, THEFILENAME);
@@ -44,20 +52,6 @@ int main()
     return 0;
 }
 
-string getnexthashtag(string texti, unsigned int& pos) {
-    unsigned int hashstart, hashend;
-
-    hashstart = texti.find("#", pos);
-
-    if ( hashstart < texti.length() ) {
-        hashend = texti.find_first_of(" .,\n\"#;?!", hashstart+1);
-        pos = hashstart+1;
-        return texti.substr(hashstart, hashend - hashstart);
-    }
-    else {
-        return "no hash";
-    }
-}
 
 
 void openinputfile(ifstream& inputfile, string thefilename) {
