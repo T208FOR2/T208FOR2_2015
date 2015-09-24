@@ -9,14 +9,22 @@ const string THEFILENAME = "twitterfeed.txt";
 
 int main()
 {
-    ofstream tmpfile;
-    tmpfile.open(THEFILENAME.c_str());
+    string currentline;
+    ifstream inputfile;
+    inputfile.open(THEFILENAME.c_str());
 
-    if (tmpfile.fail()) {
-        cout << "WTF???" << endl;
+    if (inputfile.fail()) {
+        cout << "Can't open " << THEFILENAME << endl;
+        exit(1);
     }
-    tmpfile << "Hi!" << endl;
 
-    tmpfile.close();
+    while (!inputfile.eof()) {
+        getline(inputfile, currentline);
+        cout << currentline << endl;
+    }
+
+
+    inputfile.close();
+
     return 0;
 }
