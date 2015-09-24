@@ -10,15 +10,14 @@ const int NUM = 1000;
 
 void openinputfile(ifstream& inputfile, string thefilename);
 string getnexthashtag(string texti, int& pos);
-
+int indexofelement(string tags[], int n, string newelement);
 
 int main() {
-    string currentline;
     ifstream inputfile;
-    string tag;
-    string t;
+    string tag, t;
     string hashtags[NUM];
     int hashcount[NUM];
+    int numberofelements = 0;
 
     for (int i = 0; i < NUM; i++) {
         hashtags[i] = "";
@@ -40,6 +39,10 @@ int main() {
             hashend = t.find_first_of(" .,\n\"#;?!", hashstart+1);
 
             tag = t.substr(hashstart, hashend - hashstart);
+
+            // Add to array?
+
+
             cout << "\"" << tag << "\"" << endl;
 
             hashstart = t.find("#", hashstart+1);
@@ -51,6 +54,9 @@ int main() {
     return 0;
 }
 
+int indexofelement(string tags[], int n, string newelement) {
+
+}
 
 
 void openinputfile(ifstream& inputfile, string thefilename)
