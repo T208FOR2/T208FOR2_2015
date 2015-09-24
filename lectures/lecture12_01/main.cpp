@@ -11,6 +11,7 @@ const int NUM = 1000;
 void openinputfile(ifstream& inputfile, string thefilename);
 string getnexthashtag(string texti, int& pos);
 int indexofelement(string tags[], int n, string newelement);
+void insertionSort(int array[], int length);
 
 int main() {
     ifstream inputfile;
@@ -56,6 +57,8 @@ int main() {
         }
     }
 
+
+
     for (int i = 0; i < numberofelements; i++) {
         cout << hashtags[i] << " - " << hashcount[i] << endl;
     }
@@ -63,6 +66,20 @@ int main() {
     inputfile.close();
 
     return 0;
+}
+
+void insertionSort(int array[], int length) {
+  int i, j, tmp;
+
+  for (i = 1; i < length; i++) {
+    tmp = array[i];
+    j = i;
+    while (j > 0 && array[j - 1] > tmp) {
+      array[j] = array[j - 1];
+      j--;
+    }
+    array[j] = tmp;
+  }
 }
 
 int indexofelement(string tags[], int n, string newelement) {
