@@ -48,7 +48,7 @@ int main()
     {
         getline(inputfile, t);  // get one line at a time from the file
 
-        pos = 0;
+        pos = 0; // initialize the position for the current line
         tag = getnexthashtag(t, pos);  // find the first hashtag in the line
         while (tag != NOHASHTAG)     // while we have some hashtags...
         {
@@ -59,9 +59,10 @@ int main()
         }
     }
 
-    insertionSort(hashcount, hashtags, numberofelements);
+    insertionSort(hashcount, hashtags, numberofelements);  // Sort by count (decreasing)
+    insertionSort2(hashcount, hashtags, numberofelements);  // Sort by tags (alphabetically)
 
-    for (int i = 0; i < 30; i++)
+    for (int i = 0; i < 30; i++)   // Print out the top tags
     {
         cout << hashtags[i] << " - " << hashcount[i] << endl;
     }
