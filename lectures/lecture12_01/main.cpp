@@ -112,6 +112,7 @@ void insertorupdatearrays(string tags[], int counts[], string newelement, int& n
     }
 }
 
+// Return the next hashtag in the string texti, starting at position pos
 string getnexthashtag(string texti, unsigned int& pos)
 {
     unsigned int hashstart = texti.find("#",pos);  // hashtags start with #
