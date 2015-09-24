@@ -12,6 +12,8 @@ void openinputfile(ifstream& inputfile, string thefilename);
 string getnexthashtag(string texti, int& pos);
 int indexofelement(string tags[], int n, string newelement);
 void insertionSort(int array[], string tags[], int length);
+string stringtolower(string s);
+
 
 int main() {
     ifstream inputfile;
@@ -107,4 +109,12 @@ void openinputfile(ifstream& inputfile, string thefilename)
         exit(1);
     }
 }
+
+string stringtolower(string s) {
+    for (int i = 0; i < s.length(); i++) {
+        s[i] = tolower(s[i]);
+    }
+    return s;
+}
+
 
