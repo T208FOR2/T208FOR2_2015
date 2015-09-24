@@ -8,7 +8,7 @@ using namespace std;
 const string THEFILENAME = "twitterfeed.txt";
 
 void openinputfile(ifstream& inputfile, string thefilename);
-string getnexthashtag(string texti, int& pos);
+string getnexthashtag(string texti, unsigned int& pos);
 
 
 int main()
@@ -44,7 +44,7 @@ int main()
     return 0;
 }
 
-string getnexthashtag(string texti, int& pos) {
+string getnexthashtag(string texti, unsigned int& pos) {
     unsigned int hashstart, hashend;
 
     hashstart = texti.find("#", pos+1);
