@@ -52,11 +52,12 @@ int main() {
                 hashcount[index]++;
             }
 
-
-            cout << "\"" << tag << "\"" << endl;
-
             hashstart = t.find("#", hashstart+1);
         }
+    }
+
+    for (int i = 0; i < numberofelements; i++) {
+        cout << hashtags[i] << " - " << hashcount[i] << endl;
     }
 
     inputfile.close();
