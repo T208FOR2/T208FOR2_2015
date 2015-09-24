@@ -114,19 +114,19 @@ void insertorupdatearrays(string tags[], int counts[], string newelement, int& n
 
 string getnexthashtag(string texti, unsigned int& pos)
 {
-    unsigned int hashstart = texti.find("#",pos);
-    if (hashstart < texti.length())
-    {
+    unsigned int hashstart = texti.find("#",pos);  // hashtags start with #
+    if (hashstart < texti.length()) {
+        // We've found the start of a hashtag, let's find where it ends
         unsigned int hashend = texti.find_first_of(" .,\n\"#;?!:'", hashstart+1);
-        pos = hashend;
-        return texti.substr(hashstart, hashend - hashstart);
+        pos = hashend; // Update the call-by-reference variable pos (to be ready for next iteration)
+        return texti.substr(hashstart, hashend - hashstart);  // return the hashtag
     }
-    else
-    {
-        return NOHASHTAG;
+    else {
+        return NOHASHTAG;  // Return something to indicate that there are no more hashtags in this string
     }
 }
 
+// Classic insertion sort, here sorting two arrays
 void insertionSort_int_dec(int counts[], string tags[], int length) {
     int i, j, tmp_int;
     string tmp_str;
@@ -148,6 +148,7 @@ void insertionSort_int_dec(int counts[], string tags[], int length) {
     }
 }
 
+// And again sorting, here on the string array
 void insertionSort_str_asc(int counts[], string tags[], int length) {
     int i, j, tmp_int;
     string tmp_str;
@@ -169,19 +170,18 @@ void insertionSort_str_asc(int counts[], string tags[], int length) {
     }
 }
 
-int indexofelement(string tags[], int n, string newelement)
-{
-    for (int i = 0; i < n; i++)
-    {
-        if (stringtolower(tags[i]) == stringtolower(newelement))
-        {
-            return i;
+// Find the index of an element in an array, return -1 if not found
+int indexofelement(string tags[], int n, string newelement) {
+    for (int i = 0; i < n; i++) {
+        // compare hashtags using lowercase, to eliminate duplications
+        if (stringtolower(tags[i]) == stringtolower(newelement)) {
+            return i;  // return the correct index
         }
     }
-    return -1;
+    return -1;  // if not found, return -1
 }
 
-
+// Open the inputfile and check if it opened ok
 void openinputfile(ifstream& inputfile, string thefilename)
 {
     inputfile.open(thefilename.c_str());
@@ -193,6 +193,7 @@ void openinputfile(ifstream& inputfile, string thefilename)
     }
 }
 
+// Take a string variable (call-by-value) and return a lowercase copy of it.
 string stringtolower(string s)
 {
     for (int i = 0; i < s.length(); i++)
