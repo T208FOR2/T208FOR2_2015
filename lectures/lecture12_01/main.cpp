@@ -41,27 +41,13 @@ int main() {
 
     openinputfile(inputfile, THEFILENAME);
 
-    unsigned int hashstart, hashend;
-
-    t = "#TDSBreakingNews Hillary may delay presidential #campaign. Makes the #election that much more intense. #TantricCampaigning";
-    hashstart = 0;
-    tag = getnexthashtag(t, hashstart);
-    while (tag != NOHASHTAG) {
-        cout << "\"" << tag << "\"" << endl;
-    }
-
-    return 0;
+    unsigned int pos = 0;
 
     while (!inputfile.eof()) {
         getline(inputfile, t);
 
-        hashstart = t.find("#");
-        while ( hashstart < t.length() ) {
-            // Fann hashtag!
-            hashend = t.find_first_of(" .,\n\"#;?!:'", hashstart+1);
-
-            tag = t.substr(hashstart, hashend - hashstart);
-
+        tag = getnexthashtag(t, pos);
+        while (tag != NOHASHTAG) {
             // Add to array?
             index = indexofelement(hashtags, numberofelements, tag);
             if (index == -1) {  // Add new hashtag
@@ -73,7 +59,7 @@ int main() {
                 hashcount[index]++;
             }
 
-            hashstart = t.find("#", hashstart+1);
+            tag = getnexthashtag(t, pos);
         }
     }
 
