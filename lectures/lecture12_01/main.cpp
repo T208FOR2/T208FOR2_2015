@@ -8,6 +8,8 @@ using namespace std;
 const string THEFILENAME = "twitterfeed.txt";
 
 void openinputfile(ifstream& inputfile, string thefilename);
+string getnexthashtag(string texti, int& pos);
+
 
 int main()
 {
@@ -17,15 +19,8 @@ int main()
     string t = "#TDSBreakingNews Hillary may delay presidential campaign. Makes the election that much more intense. #TantricCampaigning";
     cout << t << endl;
 
-    unsigned int hashstart, hashend;
 
-    hashstart = t.find("#");
-    while ( hashstart < t.length() ) {
-        hashend = t.find_first_of(" .,\n\"#;?!", hashstart+1);
-        tag = t.substr(hashstart, hashend - hashstart);
 
-        hashstart = t.find("#", hashstart+1);
-    }
 
     /*
     openinputfile(inputfile, THEFILENAME);
@@ -41,6 +36,23 @@ int main()
 
     return 0;
 }
+
+string getnexthashtag(string texti, int& pos) {
+    unsigned int hashstart, hashend;
+
+    hashstart = texti.find("#", pos+1);
+
+    if ( hashstart < t.length() ) {
+        hashend = t.find_first_of(" .,\n\"#;?!", hashstart+1);
+        tag = t.substr(hashstart, hashend - hashstart);
+        pos = hashend;
+        return tag;
+    }
+    else {
+        return "no hash";
+    }
+}
+
 
 void openinputfile(ifstream& inputfile, string thefilename) {
     inputfile.open(thefilename.c_str());
