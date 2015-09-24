@@ -32,8 +32,6 @@ int main() {
     openinputfile(inputfile, THEFILENAME);
 
     unsigned int hashstart, hashend;
-    cout << "--------------------" << endl;
-
 
     while (!inputfile.eof()) {
         getline(inputfile, t);
