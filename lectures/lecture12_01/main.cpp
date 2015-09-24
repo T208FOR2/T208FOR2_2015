@@ -19,7 +19,14 @@ int main()
     string t = "#TDSBreakingNews Hillary may delay presidential campaign. Makes the election that much more intense. #TantricCampaigning";
     cout << t << endl;
 
+    unsigned int pos = 0;
+    string hashtag;
 
+    hashtag = getnexthashtag(t, pos);
+    if (hashtag != "no hash") {
+        cout << hashtag << endl;
+        hashtag = getnexthashtag(t, pos);
+    }
 
 
     /*
@@ -42,11 +49,10 @@ string getnexthashtag(string texti, int& pos) {
 
     hashstart = texti.find("#", pos+1);
 
-    if ( hashstart < t.length() ) {
-        hashend = t.find_first_of(" .,\n\"#;?!", hashstart+1);
-        tag = t.substr(hashstart, hashend - hashstart);
+    if ( hashstart < texti.length() ) {
+        hashend = texti.find_first_of(" .,\n\"#;?!", hashstart+1);
         pos = hashend;
-        return tag;
+        return texti.substr(hashstart, hashend - hashstart);
     }
     else {
         return "no hash";
