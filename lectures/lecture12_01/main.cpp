@@ -12,10 +12,10 @@ using namespace std;
 
 // Constants (the filename for the input file and maximum number of unique hashtags)
 const string THEFILENAME = "twitterfeed.txt";
-const int NUM = 1000;
+const int NUM = 1000;  // maximum number of unique hashtags
 const string NOHASHTAG = "no hashtag";  // string constant if we don't find a hashtag
-const int WHITESPACE = 50;  // the number of spaces that should appear before the counter
-const int TOPCOUNT = 40;  // how many hashtags should we print
+const int WHITESPACE = 40;  // how far to the right the counter appears
+const int TOPCOUNT = 30;  // how many hashtags should we print
 
 void openinputfile(ifstream& inputfile, string thefilename);
 
