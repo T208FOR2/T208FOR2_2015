@@ -14,7 +14,7 @@ using namespace std;
 const string THEFILENAME = "twitterfeed.txt";
 const int NUM = 1000;
 const string NOHASHTAG = "no hashtag";  // string constant if we don't find a hashtag
-const int WHITESPACE = 30;  // the number of spaces that should appear before the counter
+const int WHITESPACE = 50;  // the number of spaces that should appear before the counter
 
 void openinputfile(ifstream& inputfile, string thefilename);
 
@@ -70,8 +70,9 @@ int main()
     for (int i = 0; i < 30; i++)   // Print out the top tags
     {
         cout << hashtags[i];
-        for (int j = 0; j < WHITESPACE - hashtags[i].length(); j++) {
+        for (unsigned int j = 0; j < WHITESPACE - hashtags[i].length(); j++) {
             cout << " ";
+            cout << j << " " << WHITESPACE << " " << hashtags[i].length() << endl;
         }
         cout << " x " << hashcount[i] << endl;
     }
