@@ -2,6 +2,7 @@
 #include <fstream>
 #include <string>
 #include <cstdlib>
+#include <cctype>
 
 using namespace std;
 
@@ -91,7 +92,7 @@ void insertionSort(int array[], string tags[], int length) {
 
 int indexofelement(string tags[], int n, string newelement) {
     for (int i = 0; i < n; i++) {
-        if (tags[i] == newelement) {
+        if (stringtolower(tags[i]) == stringtolower(newelement)) {
             return i;
         }
     }
