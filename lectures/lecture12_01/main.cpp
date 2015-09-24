@@ -23,7 +23,8 @@ int indexofelement(string tags[], int n, string newelement);
 
 void insertorupdatearrays(string tags[], int counts[], string newelement, int& numberofelements);
 
-void insertionSort(int array[], string tags[], int length);
+void insertionSort_int_dec(int array[], string tags[], int length);
+void insertionSort_str_asc(int array[], string tags[], int length);
 
 string stringtolower(string s);
 
@@ -59,8 +60,8 @@ int main()
         }
     }
 
-    insertionSort(hashcount, hashtags, numberofelements);  // Sort by count (decreasing)
-    insertionSort2(hashcount, hashtags, numberofelements);  // Sort by tags (alphabetically)
+    insertionSort_int_dec(hashcount, hashtags, numberofelements);  // Sort by count (decreasing)
+    insertionSort_str_asc(hashcount, hashtags, numberofelements);  // Sort by tags (alphabetically)
 
     for (int i = 0; i < 30; i++)   // Print out the top tags
     {
@@ -107,26 +108,45 @@ string getnexthashtag(string texti, unsigned int& pos)
     }
 }
 
-
-void insertionSort(int array[], string tags[], int length)
-{
-    int i, j, tmp;
-    string tmp2;
+void insertionSort_int_dec(int counts[], string tags[], int length) {
+    int i, j, tmp_int;
+    string tmp_str;
 
     for (i = 1; i < length; i++)
     {
-        tmp = array[i];
-        tmp2 = tags[i];
+        tmp_int = counts[i];
+        tmp_str = tags[i];
 
         j = i;
-        while (j > 0 && array[j - 1] < tmp)
+        while (j > 0 && counts[j - 1] < tmp_int)
         {
-            array[j] = array[j - 1];
+            counts[j] = counts[j - 1];
             tags[j] = tags[j - 1];
             j--;
         }
-        array[j] = tmp;
-        tags[j] = tmp2;
+        counts[j] = tmp_int;
+        tags[j] = tmp_str;
+    }
+}
+
+void insertionSort_str_asc(int counts[], string tags[], int length) {
+    int i, j, tmp_int;
+    string tmp_str;
+
+    for (i = 1; i < length; i++)
+    {
+        tmp_int = counts[i];
+        tmp_str = tags[i];
+
+        j = i;
+        while (j > 0 && tags[j - 1] > tmp_str)
+        {
+            counts[j] = counts[j - 1];
+            tags[j] = tags[j - 1];
+            j--;
+        }
+        counts[j] = tmp_int;
+        tags[j] = tmp_str;
     }
 }
 
