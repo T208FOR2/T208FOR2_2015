@@ -60,8 +60,8 @@ int main()
         }
     }
 
-    insertionSort_int_dec(hashcount, hashtags, numberofelements);  // Sort by count (decreasing)
     insertionSort_str_asc(hashcount, hashtags, numberofelements);  // Sort by tags (alphabetically)
+    insertionSort_int_dec(hashcount, hashtags, numberofelements);  // Sort by count (decreasing)
 
     for (int i = 0; i < 30; i++)   // Print out the top tags
     {
