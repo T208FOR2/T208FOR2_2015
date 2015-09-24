@@ -17,7 +17,7 @@ const string NOHASHTAG = "no hashtag";
 
 void openinputfile(ifstream& inputfile, string thefilename);
 
-string getnexthashtag(string texti, int& pos);
+string getnexthashtag(string texti, unsigned int& pos);
 
 int indexofelement(string tags[], int n, string newelement);
 
@@ -42,6 +42,15 @@ int main() {
     openinputfile(inputfile, THEFILENAME);
 
     unsigned int hashstart, hashend;
+
+    t = "#TDSBreakingNews Hillary may delay presidential #campaign. Makes the #election that much more intense. #TantricCampaigning";
+    hashstart = 0;
+    tag = getnexthashtag(t, hashstart);
+    while (tag != NOHASHTAG) {
+        cout << "\"" << tag << "\"" << endl;
+    }
+
+    return 0;
 
     while (!inputfile.eof()) {
         getline(inputfile, t);
@@ -80,7 +89,7 @@ int main() {
 }
 
 
-string getnexthashtag(string texti, int& pos) {
+string getnexthashtag(string texti, unsigned int& pos) {
     unsigned int hashstart = texti.find("#",pos);
     if (hashstart < texti.length()) {
         unsigned int hashend = texti.find_first_of(" .,\n\"#;?!:'", hashstart+1);
