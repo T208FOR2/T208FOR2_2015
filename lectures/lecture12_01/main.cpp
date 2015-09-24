@@ -40,10 +40,13 @@ string stringtolower(string s);
 
 int main()
 {
+    // Define variables
     ifstream inputfile;
     string tag, t, hashtags[NUM];
     int hashcount[NUM], numberofelements = 0;
+    unsigned int pos;
 
+    // Initialize arrays
     for (int i = 0; i < NUM; i++)
     {
         hashtags[i] = "";
@@ -52,8 +55,7 @@ int main()
 
     openinputfile(inputfile, THEFILENAME);
 
-    unsigned int pos;
-
+    // Read through the input file
     while (!inputfile.eof())
     {
         getline(inputfile, t);  // get one line at a time from the file
@@ -77,11 +79,13 @@ int main()
 
     for (int i = 0; i < TOPCOUNT; i++)   // Print out the top tags
     {
-        cout << hashtags[i];
+        cout << hashtags[i];  // Print the hashtag
+
+        // Print whitespace so that the counters line up
         for (unsigned int j = 0; j < WHITESPACE - hashtags[i].length(); j++) {
             cout << " ";
         }
-        cout << " x " << hashcount[i] << endl;
+        cout << " x " << hashcount[i] << endl;  // print the counter
     }
 
     inputfile.close();
@@ -92,19 +96,18 @@ int main()
 
 void insertorupdatearrays(string tags[], int counts[], string newelement, int& numberofelements)
 {
+    // get the index of newelement (-1 if it is not in the array tags)
     int index = indexofelement(tags, numberofelements, newelement);
 
-    if (index >= 0)  // Hashtag exists -> increase counter
-    {
+    if (index >= 0) { // Hashtag exists -> increase counter
         counts[index]++;
     }
-    else if (numberofelements < NUM)    // Add new hashtag (if there is space)
-    {
+    else if (numberofelements < NUM) {   // Add new hashtag (if there is space)
         tags[numberofelements] = newelement;
         counts[numberofelements] = 1;
         numberofelements++;
     }
-    else {  // Running out of space
+    else {  // Running out of space - can't add new hashtag
         cout << "The number of unique hashtags is more than the limit of " << NUM << endl;
     }
 }
