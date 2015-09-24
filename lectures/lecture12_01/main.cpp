@@ -20,6 +20,11 @@ int main() {
     string hashtags[NUM];
     int hashcount[NUM];
 
+    for (int i = 0; i < NUM; i++) {
+        hashtags[i] = "";
+        hashcount[i] = 0;
+    }
+
     openinputfile(inputfile, THEFILENAME);
 
     unsigned int hashstart, hashend;
