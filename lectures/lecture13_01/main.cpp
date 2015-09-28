@@ -27,7 +27,8 @@ int main()
 
     delete [] p;
 
-
+    p = NULL;
+    q = NULL;
 
     return 0;
 }
