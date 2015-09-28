@@ -4,17 +4,15 @@ using namespace std;
 
 int main()
 {
-    int tala1 = 42, tala2 = 23;
-    int *p1, *p2;
+    int *p;
 
-    p1 = &tala1;
-    p2 = &tala2;
+    p = new int;
 
-    p1 = p2;
+    *p = 42;
 
-    *p1 = 17;
+    cout << *(p + 7) << endl;
 
-    cout << tala1 << " - " << tala2 << endl;
+    delete p;
 
     return 0;
 }
