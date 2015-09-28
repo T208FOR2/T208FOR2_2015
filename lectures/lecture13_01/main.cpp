@@ -13,7 +13,11 @@ int main()
     *p1 = 17;
 
     cout << tala1 << " - " << tala2 << endl;
-//    cout << *p1 << " - " << *p2 << endl;
+    cout << &tala1 << " - " << &tala2 << endl;
+    cout << "-----------------" << endl;
+    cout << p1 << " - " << p2 << endl;
+    cout << *p1 << " - " << *p2 << endl;
+    cout << &p1 << " - " << &p2 << endl;
 
     return 0;
 }
