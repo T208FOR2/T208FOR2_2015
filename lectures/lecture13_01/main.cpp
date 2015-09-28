@@ -13,14 +13,16 @@ int main()
     for (int i = 0; i < n; i++) {
         p[i] = i;
     }
+    cout << "---------------" << endl;
 
     for (int i = 0; i < n; i++) {
         cout << p[i] << endl;
     }
+    cout << "---------------" << endl;
 
     q[4] = 32;
     for (int i = 0; i < n; i++) {
-        cout << q[i] << endl;
+        cout << p[i] << endl;
     }
 
     delete [] p;
