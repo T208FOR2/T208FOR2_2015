@@ -4,15 +4,16 @@ using namespace std;
 
 int main()
 {
+    int a[10];
     int *p;
 
-    p = new int;
+    for (int i = 0; i < 10; i++) {
+        a[i] = i;
+    }
 
-    *p = 42;
+    p = a;
 
     cout << *(p + 7) << endl;
-
-    delete p;
 
     return 0;
 }
