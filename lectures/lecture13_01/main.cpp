@@ -8,7 +8,7 @@ int main()
     cin >> n;
 
     int *p;
-    p = new int[n];
+    p = int[n];
 
     for (int i = 0; i < n; i++) {
         p[i] = i;
