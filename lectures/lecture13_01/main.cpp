@@ -7,6 +7,8 @@ int main()
     int n;
     cin >> n;
 
+    const int m = n;
+
     int *p = new int[n];
     int *q = p;
 
@@ -29,6 +31,8 @@ int main()
 
     p = NULL;
     q = NULL;
+
+    delete q;
 
     return 0;
 }
