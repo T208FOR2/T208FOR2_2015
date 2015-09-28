@@ -10,7 +10,7 @@ int main()
     p1 = &tala1;
     p2 = &tala2;
 
-    *p2 = *p1;
+    p2 = p1;
 
     *p1 = 17;
 
