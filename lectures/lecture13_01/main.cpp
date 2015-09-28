@@ -8,6 +8,9 @@ int main()
     cin >> n;
 
     const int m = n;
+    cout << m;
+    int a[m];
+
 
     int *p = new int[n];
     int *q = p;
