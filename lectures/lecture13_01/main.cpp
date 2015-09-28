@@ -11,7 +11,7 @@ int main()
         a[i] = i;
     }
 
-    p = a;
+    p = &a[0];
 
     cout << *(p + 7) << endl;
 
