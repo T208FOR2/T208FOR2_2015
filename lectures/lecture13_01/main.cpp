@@ -7,14 +7,8 @@ int main()
     int n;
     cin >> n;
 
-    int *p;
-    p = new int[n];
-
-    while (true) {
-        p = new int[1000000];
-
-        cout << "Hi!" << endl;
-    }
+    int *p = new int[n];
+    int *q = p;
 
     for (int i = 0; i < n; i++) {
         p[i] = i;
@@ -22,6 +16,11 @@ int main()
 
     for (int i = 0; i < n; i++) {
         cout << p[i] << endl;
+    }
+
+    q[4] = 32;
+    for (int i = 0; i < n; i++) {
+        cout << q[i] << endl;
     }
 
     delete [] p;
