@@ -10,8 +10,8 @@ int main()
     p1 = &tala1;
     p2 = &tala2;
 
-    cout << tala1 << " - " << tala2 << endl;
-    cout << *p1 << " - " << *p2 << endl;
+    cout << &tala1 << " - " << &tala2 << endl;
+    cout << p1 << " - " << p2 << endl;
 
     return 0;
 }
