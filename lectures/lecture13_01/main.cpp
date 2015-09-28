@@ -10,6 +10,12 @@ int main()
     int *p;
     p = new int[n];
 
+    while (true) {
+        p = new int[1000000];
+
+        cout << "Hi!" << endl;
+    }
+
     for (int i = 0; i < n; i++) {
         p[i] = i;
     }
