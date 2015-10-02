@@ -7,35 +7,15 @@ int main()
     int n;
     cin >> n;
 
-    const int m = n;
-    cout << m;
-    int a[m];
-
-
     int *p = new int[n];
-    int *q = p;
 
     for (int i = 0; i < n; i++) {
-        p[i] = i;
+        p[i] = 0;
     }
-    cout << "---------------" << endl;
 
-    for (int i = 0; i < n; i++) {
-        cout << p[i] << endl;
-    }
-    cout << "---------------" << endl;
-
-    q[4] = 32;
-    for (int i = 0; i < n; i++) {
-        cout << p[i] << endl;
-    }
+    // Here we have a dynamic and initialized array called p with n elements
 
     delete [] p;
-
-    p = NULL;
-    q = NULL;
-
-    delete q;
 
     return 0;
 }
