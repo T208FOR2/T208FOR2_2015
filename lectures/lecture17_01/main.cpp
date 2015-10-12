@@ -5,6 +5,7 @@ using namespace std;
 class Timi {
 public:
     Timi();
+    Timi(int k, int m);
 
     void set_klst(int k);
     void set_minutur(int m);
@@ -24,6 +25,12 @@ Timi::Timi() {
     minutur = 0;
     klst = 0;
     cout << "Hi, I'm the default constructor!" << endl;
+}
+
+Timi::Timi(int k, int m) {
+    minutur = m;
+    klst = k;
+    cout << "Hi, I'm the constructor with two parameters!" << endl;
 }
 
 // ------------------ MAIN ------------------
