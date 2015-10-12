@@ -18,11 +18,7 @@ private:
     void fix_klst();
 };
 
-void Timi::output() {
-    cout << klst;
-    cout << ":";
-    cout << minutur;
-}
+
 
 // ------------------ MAIN ------------------
 int main()
@@ -90,3 +86,14 @@ void Timi::fix_klst() {
     }
 }
 
+void Timi::output() {
+    if (klst < 10) {
+        cout << "0";
+    }
+    cout << klst;
+    cout << ":";
+    if (minutur < 10) {
+        cout << "0";
+    }
+    cout << minutur;
+}
