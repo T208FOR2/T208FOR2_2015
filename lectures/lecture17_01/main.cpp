@@ -4,6 +4,8 @@ using namespace std;
 
 class Timi {
 public:
+
+private:
     int minutur;
     int klst;
 };
