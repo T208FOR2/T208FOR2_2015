@@ -2,6 +2,12 @@
 
 using namespace std;
 
+class Timi {
+public:
+
+};
+
+
 int main()
 {
 
