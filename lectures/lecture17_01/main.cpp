@@ -18,10 +18,13 @@ private:
 
 void Timi::set_klst(int k) {
     klst = k;
+    fix_klst();
 }
 
 void Timi::set_minutur(int m) {
     minutur = m;
+    fix_minutur();
+    fix_klst();
 }
 
 int Timi::get_klst() {
