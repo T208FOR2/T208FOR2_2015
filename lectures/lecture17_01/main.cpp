@@ -43,7 +43,12 @@ void fix_minutur() {
 }
 
 void fix_klst() {
-
+    while (klst < 0) {
+        klst += 24;
+    }
+    while (klst >= 24) {
+        klst -= 24;
+    }
 }
 
 
