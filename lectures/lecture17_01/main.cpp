@@ -23,8 +23,16 @@ private:
 };
 
 Timi addTimi(Timi t1, Timi t2) {
+    Timi newtimi;
 
+    newtimi.set_minutur(t1.get_minutur() + t2.get_minutur());
+    newtimi.set_klst(t1.get_klst() + t2.get_klst());
+
+    return newtimi;
 }
+
+
+
 
 // ------------------ MAIN ------------------
 int main()
@@ -47,7 +55,10 @@ int main()
     t1.output();
     cout << endl;
 
-
+    Timi t4;
+    t4 = addTimi(t1,t2);
+    t4.output();
+    cout << endl;
 
     return 0;
 }
