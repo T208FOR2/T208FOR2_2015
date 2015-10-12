@@ -13,11 +13,11 @@ private:
 };
 
 void Timi::set_klst(int k) {
-
+    klst = k;
 }
 
 void Timi::set_minutur(int m) {
-
+    minutur = m;
 }
 
 
