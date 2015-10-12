@@ -8,6 +8,8 @@ public:
     void set_minutur(int m);
     int get_klst();
     int get_minutur();
+
+
 private:
     int minutur;
     int klst;
