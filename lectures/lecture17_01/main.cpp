@@ -31,7 +31,7 @@ int Timi::get_minutur() {
     return minutur;
 }
 
-void fix_minutur() {
+void Timi::fix_minutur() {
     while (minutur < 0) {
         minutur += 60;
         klst--;
@@ -42,7 +42,7 @@ void fix_minutur() {
     }
 }
 
-void fix_klst() {
+void Timi::fix_klst() {
     while (klst < 0) {
         klst += 24;
     }
