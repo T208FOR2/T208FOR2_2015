@@ -36,12 +36,14 @@ Timi::Timi(int k, int m) {
 // ------------------ MAIN ------------------
 int main()
 {
-    Timi t1;
+    Timi t1, t2(13,37);
 
     t1.set_klst(13);
     t1.set_minutur(21);
 
     t1.output();
+    cout << endl;
+    t2.output();
     cout << endl;
 
     t1.set_klst(908374);
