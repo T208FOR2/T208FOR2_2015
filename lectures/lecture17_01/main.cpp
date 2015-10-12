@@ -16,6 +16,34 @@ private:
     void fix_klst();
 };
 
+
+
+// ------------------ MAIN ------------------
+int main()
+{
+    Timi t1;
+
+    t1.set_klst(13);
+    t1.set_minutur(21);
+
+    cout << t1.get_klst() << ":" << t1.get_minutur() << endl;
+
+    t1.set_klst(908374);
+    t1.set_minutur(-448934);
+
+    cout << t1.get_klst() << ":" << t1.get_minutur() << endl;
+
+    return 0;
+}
+
+
+
+
+
+// -------------------------------
+// FUNCTIONS
+// -------------------------------
+
 void Timi::set_klst(int k) {
     klst = k;
     fix_klst();
@@ -54,20 +82,3 @@ void Timi::fix_klst() {
     }
 }
 
-
-int main()
-{
-    Timi t1;
-
-    t1.set_klst(13);
-    t1.set_minutur(21);
-
-    cout << t1.get_klst() << ":" << t1.get_minutur() << endl;
-
-    t1.set_klst(908374);
-    t1.set_minutur(-448934);
-
-    cout << t1.get_klst() << ":" << t1.get_minutur() << endl;
-
-    return 0;
-}
