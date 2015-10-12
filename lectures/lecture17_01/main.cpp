@@ -22,7 +22,9 @@ private:
     void fix_klst();
 };
 
+Timi addTimi(Timi t1, Timi t2) {
 
+}
 
 // ------------------ MAIN ------------------
 int main()
