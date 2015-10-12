@@ -45,6 +45,10 @@ int main()
     t1.output();
     cout << endl;
 
+    if (t1 == t2) {
+        cout << "Something!" << endl;
+    }
+
     return 0;
 }
 
