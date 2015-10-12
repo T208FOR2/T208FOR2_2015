@@ -11,6 +11,9 @@ public:
 private:
     int minutur;
     int klst;
+
+    void fix_minutur();
+    void fix_klst();
 };
 
 void Timi::set_klst(int k) {
@@ -26,6 +29,21 @@ int Timi::get_klst() {
 }
 int Timi::get_minutur() {
     return minutur;
+}
+
+void fix_minutur() {
+    while (minutur < 0) {
+        minutur += 60;
+        klst--;
+    }
+    while (minutur >= 60) {
+        minutur -= 60;
+        klst++;
+    }
+}
+
+void fix_klst() {
+
 }
 
 
