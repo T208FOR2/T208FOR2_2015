@@ -18,7 +18,11 @@ private:
     void fix_klst();
 };
 
-
+void Timi::output() {
+    cout << klst;
+    cout << ":";
+    cout << minutur;
+}
 
 // ------------------ MAIN ------------------
 int main()
@@ -29,12 +33,13 @@ int main()
     t1.set_minutur(21);
 
     t1.output();
-    cout << t1.get_klst() << ":" << t1.get_minutur() << endl;
+    cout << endl;
 
     t1.set_klst(908374);
     t1.set_minutur(-448934);
 
-    cout << t1.get_klst() << ":" << t1.get_minutur() << endl;
+    t1.output();
+    cout << endl;
 
     return 0;
 }
