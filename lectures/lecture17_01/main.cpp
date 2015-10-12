@@ -14,6 +14,8 @@ public:
     int get_minutur();
 
     void output();
+
+    friend Timi addTimi(Timi t1, Timi t2);
 private:
     int minutur;
     int klst;
@@ -24,6 +26,10 @@ private:
 
 Timi addTimi(Timi t1, Timi t2) {
     Timi newtimi;
+    newtimi.minutur = t1.minutur + t2.minutur;
+    newtimi.klst = t1.klst + t2.klst;
+    newtimi.fix_minutur();
+    newtimi.fix_klst();
 
     newtimi.set_minutur(t1.get_minutur() + t2.get_minutur());
     newtimi.set_klst(t1.get_klst() + t2.get_klst());
@@ -55,6 +61,7 @@ int main()
     t1.output();
     cout << endl;
 
+    cout << "----- adding time ------" << endl;
     Timi t4;
     t4 = addTimi(t1,t2);
     t4.output();
