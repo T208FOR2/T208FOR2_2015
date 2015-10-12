@@ -4,6 +4,8 @@ using namespace std;
 
 class Timi {
 public:
+    Timi();
+
     void set_klst(int k);
     void set_minutur(int m);
     int get_klst();
@@ -18,7 +20,10 @@ private:
     void fix_klst();
 };
 
-
+Timi::Timi() {
+    minutur = 0;
+    klst = 0;
+}
 
 // ------------------ MAIN ------------------
 int main()
