@@ -22,30 +22,7 @@ private:
     void fix_klst();
 };
 
-Timi::Timi() {
-    minutur = 0;
-    klst = 0;
-    cout << "Hi, I'm the default constructor!" << endl;
-}
 
-Timi::Timi(int m) {
-    minutur = m;
-    klst = 0;
-
-    fix_minutur();
-    fix_klst();
-
-    cout << "Hi, I'm the constructor with a single parameter!" << endl;
-}
-
-Timi::Timi(int k, int m) {
-    minutur = m;
-    klst = k;
-
-    fix_minutur();
-    fix_klst();
-    cout << "Hi, I'm the constructor with two parameters!" << endl;
-}
 
 // ------------------ MAIN ------------------
 int main()
@@ -78,6 +55,31 @@ int main()
 // -------------------------------
 // FUNCTIONS
 // -------------------------------
+
+Timi::Timi() {
+    minutur = 0;
+    klst = 0;
+    //cout << "Hi, I'm the default constructor!" << endl;
+}
+
+Timi::Timi(int m) {
+    minutur = m;
+    klst = 0;
+
+    fix_minutur();
+    fix_klst();
+
+    //cout << "Hi, I'm the constructor with a single parameter!" << endl;
+}
+
+Timi::Timi(int k, int m) {
+    minutur = m;
+    klst = k;
+
+    fix_minutur();
+    fix_klst();
+    //cout << "Hi, I'm the constructor with two parameters!" << endl;
+}
 
 void Timi::set_klst(int k) {
     klst = k;
