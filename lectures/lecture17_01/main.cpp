@@ -9,7 +9,7 @@ public:
     int get_klst();
     int get_minutur();
 
-
+    void output();
 private:
     int minutur;
     int klst;
@@ -28,6 +28,7 @@ int main()
     t1.set_klst(13);
     t1.set_minutur(21);
 
+    t1.output();
     cout << t1.get_klst() << ":" << t1.get_minutur() << endl;
 
     t1.set_klst(908374);
