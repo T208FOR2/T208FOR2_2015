@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1442930298 source:c:\users\hjorleifur12\desktop\t208for2_2015\problem_solving_class\dt01\dt05\main.cpp
+	<iostream>
+	<fstream>
+	<cstdlib>
+	<string>
+
