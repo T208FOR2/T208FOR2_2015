@@ -5,7 +5,7 @@ using namespace std;
 class Timi {
 public:
     Timi();
-    Timi(int m);
+//    Timi(int m);
     Timi(int k, int m);
 
     void set_klst(int k);
@@ -57,7 +57,7 @@ int main()
     t1.set_minutur(21);
 
     cout << "Timinn t1 = " << t1 << endl;
-    t1 = t1 + t1;
+    t1 = t1 + 20;
     cout << "Timinn t1 = " << t1 << endl;
 
     return 0;
