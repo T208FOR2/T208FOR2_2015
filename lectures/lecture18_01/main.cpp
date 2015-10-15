@@ -61,6 +61,9 @@ int main()
     Timi t4;
     t4 = addTimi(t1,t2);
     t4.output();
+
+    t4 = t1 + t2;
+    t4.output();
     cout << endl;
 
     return 0;
