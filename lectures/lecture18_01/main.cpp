@@ -23,6 +23,8 @@ public:
     friend bool operator == (const Timi &t1, const Timi &t2);
     friend bool operator >= (const Timi &t1, const Timi &t2);
     friend bool operator < (const Timi &t1, const Timi &t2);
+
+    friend ostream& operator << (ostream& outs, const Timi& t1);
 private:
     int minutur;
     int klst;
@@ -31,7 +33,19 @@ private:
     void fix_klst();
 };
 
+ostream& operator << (ostream& outs, const Timi& t1) {
+    if (klst < 10) {
+        outs << "0";
+    }
+    outs << klst;
+    outs << ":";
+    if (minutur < 10) {
+        outs << "0";
+    }
+    outs << minutur;
 
+
+}
 
 
 // ------------------ MAIN ------------------
@@ -49,7 +63,8 @@ int main()
     t1.set_klst(908374);
     t1.set_minutur(-448934);
 
-    cout << t1 << endl;
+    cout << t1;
+    cout << endl;
 
     cout << "----- adding time ------" << endl;
     Timi t4;
