@@ -24,7 +24,16 @@ private:
     void fix_klst();
 };
 
+Timi addTimi(Timi t1, Timi t2) {
+    Timi newtimi;
 
+    newtimi.minutur = t1.minutur + t2.minutur;
+    newtimi.klst = t1.klst + t2.klst;
+    newtimi.fix_minutur();
+    newtimi.fix_klst();
+
+    return newtimi;
+}
 
 
 // ------------------ MAIN ------------------
@@ -64,17 +73,6 @@ int main()
 // -------------------------------
 // FUNCTIONS
 // -------------------------------
-
-Timi addTimi(Timi t1, Timi t2) {
-    Timi newtimi;
-
-    newtimi.minutur = t1.minutur + t2.minutur;
-    newtimi.klst = t1.klst + t2.klst;
-    newtimi.fix_minutur();
-    newtimi.fix_klst();
-
-    return newtimi;
-}
 
 Timi::Timi() {
     minutur = 0;
