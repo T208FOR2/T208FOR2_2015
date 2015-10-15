@@ -21,6 +21,7 @@ public:
 
     friend bool operator > (const Timi &t1, const Timi &t2);
     friend bool operator == (const Timi &t1, const Timi &t2);
+    friend bool operator >= (const Timi &t1, const Timi &t2);
 private:
     int minutur;
     int klst;
@@ -29,13 +30,12 @@ private:
     void fix_klst();
 };
 
+bool operator >= (const Timi &t1, const Timi &t2) {
+    return (t1 > t2 || t1 == t2);
+}
+
 bool operator == (const Timi &t1, const Timi &t2) {
-    if (t1.minutur == t2.minutur && t1.klst == t2.klst) {
-        return true;
-    }
-    else {
-        return false;
-    }
+    return (t1.minutur == t2.minutur && t1.klst == t2.klst);
 }
 
 bool operator > (const Timi &t1, const Timi &t2) {
