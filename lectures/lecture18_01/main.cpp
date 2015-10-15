@@ -56,7 +56,7 @@ int main()
     t1.set_klst(13);
     t1.set_minutur(21);
 
-    cout << t1 << endl;
+    cout << "Timinn t1 = " << t1 << endl;
     cout << t2 << endl;
     cout << t3 << endl;
 
