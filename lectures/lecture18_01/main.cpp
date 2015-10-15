@@ -22,6 +22,7 @@ public:
     friend bool operator > (const Timi &t1, const Timi &t2);
     friend bool operator == (const Timi &t1, const Timi &t2);
     friend bool operator >= (const Timi &t1, const Timi &t2);
+    friend bool operator < (const Timi &t1, const Timi &t2);
 private:
     int minutur;
     int klst;
@@ -30,46 +31,7 @@ private:
     void fix_klst();
 };
 
-bool operator >= (const Timi &t1, const Timi &t2) {
-    return (t1 > t2 || t1 == t2);
-}
 
-bool operator == (const Timi &t1, const Timi &t2) {
-    return (t1.minutur == t2.minutur && t1.klst == t2.klst);
-}
-
-bool operator > (const Timi &t1, const Timi &t2) {
-    if (t1.klst > t2.klst) {
-        return true;
-    }
-    else if (t1.klst == t2.klst && t1.minutur > t2.minutur) {
-        return true;
-    }
-    return false;
-}
-
-
-Timi operator + (const Timi &t1, const Timi &t2) {
-    Timi newtimi;
-
-    newtimi.minutur = t1.minutur + t2.minutur;
-    newtimi.klst = t1.klst + t2.klst;
-    newtimi.fix_minutur();
-    newtimi.fix_klst();
-
-    return newtimi;
-}
-
-Timi addTimi(const Timi &t1, const Timi &t2) {
-    Timi newtimi;
-
-    newtimi.minutur = t1.minutur + t2.minutur;
-    newtimi.klst = t1.klst + t2.klst;
-    newtimi.fix_minutur();
-    newtimi.fix_klst();
-
-    return newtimi;
-}
 
 
 // ------------------ MAIN ------------------
@@ -126,6 +88,51 @@ int main()
 // -------------------------------
 // FUNCTIONS
 // -------------------------------
+
+bool operator < (const Timi &t1, const Timi &t2) {
+    return !(t1 >= t2);
+}
+
+bool operator >= (const Timi &t1, const Timi &t2) {
+    return (t1 > t2 || t1 == t2);
+}
+
+bool operator == (const Timi &t1, const Timi &t2) {
+    return (t1.minutur == t2.minutur && t1.klst == t2.klst);
+}
+
+bool operator > (const Timi &t1, const Timi &t2) {
+    if (t1.klst > t2.klst) {
+        return true;
+    }
+    else if (t1.klst == t2.klst && t1.minutur > t2.minutur) {
+        return true;
+    }
+    return false;
+}
+
+
+Timi operator + (const Timi &t1, const Timi &t2) {
+    Timi newtimi;
+
+    newtimi.minutur = t1.minutur + t2.minutur;
+    newtimi.klst = t1.klst + t2.klst;
+    newtimi.fix_minutur();
+    newtimi.fix_klst();
+
+    return newtimi;
+}
+
+Timi addTimi(const Timi &t1, const Timi &t2) {
+    Timi newtimi;
+
+    newtimi.minutur = t1.minutur + t2.minutur;
+    newtimi.klst = t1.klst + t2.klst;
+    newtimi.fix_minutur();
+    newtimi.fix_klst();
+
+    return newtimi;
+}
 
 Timi::Timi() {
     minutur = 0;
