@@ -15,7 +15,7 @@ public:
 
     void output();
 
-    friend Timi addTimi(Timi &t1, Timi &t2);
+    friend Timi addTimi(const Timi &t1, const Timi &t2);
 private:
     int minutur;
     int klst;
@@ -24,13 +24,14 @@ private:
     void fix_klst();
 };
 
-Timi addTimi(Timi &t1, Timi &t2) {
+Timi addTimi(const Timi &t1, const Timi &t2) {
     Timi newtimi;
 
     newtimi.minutur = t1.minutur + t2.minutur;
     newtimi.klst = t1.klst + t2.klst;
     newtimi.fix_minutur();
     newtimi.fix_klst();
+    t1.minutur = -2342;
 
     return newtimi;
 }
