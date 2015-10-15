@@ -19,7 +19,7 @@ public:
     friend Timi addTimi(const Timi &t1, const Timi &t2);
     friend Timi operator + (const Timi &t1, const Timi &t2);
 
-    friend  operator > ();
+    friend bool operator > (const Timi &t1, const Timi &t2);
 private:
     int minutur;
     int klst;
@@ -27,6 +27,17 @@ private:
     void fix_minutur();
     void fix_klst();
 };
+
+bool operator > (const Timi &t1, const Timi &t2) {
+    if (t1.klst > t2.klst) {
+        return true;
+    }
+    else if (t1.klst == t2.klst && t1.minutur > t2.minutur) {
+        return true;
+    }
+    return false;
+}
+
 
 Timi operator + (const Timi &t1, const Timi &t2) {
     Timi newtimi;
