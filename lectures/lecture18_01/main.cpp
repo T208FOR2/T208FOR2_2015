@@ -18,6 +18,8 @@ public:
     // old ugly version of adding
     friend Timi addTimi(const Timi &t1, const Timi &t2);
     friend Timi operator + (const Timi &t1, const Timi &t2);
+
+    friend  operator > ();
 private:
     int minutur;
     int klst;
@@ -83,6 +85,15 @@ int main()
     t4 = t1 + t2 + t3 + t1 + t2 + t3;
     t4.output();
     cout << endl;
+
+    if (t1 > t2) {
+        t1.output();
+        cout << endl;
+    }
+    else {
+        t2.output();
+        cout << endl;
+    }
 
     return 0;
 }
