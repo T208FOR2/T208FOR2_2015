@@ -5,7 +5,7 @@ using namespace std;
 class Timi {
 public:
     Timi();
-//    Timi(int m);
+    Timi(int m);
     Timi(int k, int m);
 
     void set_klst(int k);
@@ -18,7 +18,6 @@ public:
     // old ugly version of adding
     friend Timi addTimi(const Timi &t1, const Timi &t2);
     friend Timi operator + (const Timi &t1, const Timi &t2);
-    friend Timi operator + (const Timi &t1, const int &m);
 
     friend bool operator > (const Timi &t1, const Timi &t2);
     friend bool operator == (const Timi &t1, const Timi &t2);
@@ -26,6 +25,7 @@ public:
     friend bool operator < (const Timi &t1, const Timi &t2);
 
     friend ostream& operator << (ostream& outs, const Timi& t1);
+    friend istream& operator >> (istream& ins, Timi& t1);
 private:
     int minutur;
     int klst;
@@ -33,6 +33,11 @@ private:
     void fix_minutur();
     void fix_klst();
 };
+
+istream& operator >> (istream& ins, Timi& t1) {
+    ins >> t1.klst >> t1.minutur;
+    return ins;
+}
 
 ostream& operator << (ostream& outs, const Timi& t1) {
     if (t1.klst < 10) {
