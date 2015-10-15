@@ -34,17 +34,17 @@ private:
 };
 
 ostream& operator << (ostream& outs, const Timi& t1) {
-    if (klst < 10) {
+    if (t1.klst < 10) {
         outs << "0";
     }
-    outs << klst;
+    outs << t1.klst;
     outs << ":";
-    if (minutur < 10) {
+    if (t1.minutur < 10) {
         outs << "0";
     }
-    outs << minutur;
+    outs << t1.minutur;
 
-
+    return outs;
 }
 
 
