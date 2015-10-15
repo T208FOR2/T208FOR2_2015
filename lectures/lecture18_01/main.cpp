@@ -42,40 +42,31 @@ int main()
     t1.set_klst(13);
     t1.set_minutur(21);
 
-    t1.output();
-    cout << endl;
-    t2.output();
-    cout << endl;
-    t3.output();
-    cout << endl;
+    cout << t1 << endl;
+    cout << t2 << endl;
+    cout << t3 << endl;
 
     t1.set_klst(908374);
     t1.set_minutur(-448934);
 
-    t1.output();
-    cout << endl;
+    cout << t1 << endl;
 
     cout << "----- adding time ------" << endl;
     Timi t4;
     t4 = addTimi(t1,t2);
-    t4.output();
-    cout << endl;
+    cout << t4 << endl;
 
     t4 = t1 + t2;
-    t4.output();
-    cout << endl;
+    cout << t4 << endl;
 
     t4 = t1 + t2 + t3 + t1 + t2 + t3;
-    t4.output();
-    cout << endl;
+    cout << t4 << endl;
 
     if (t1 > t2) {
-        t1.output();
-        cout << endl;
+        cout << t1 << endl;
     }
     else {
-        t2.output();
-        cout << endl;
+        cout << t2 << endl;
     }
 
     return 0;
