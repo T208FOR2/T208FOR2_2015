@@ -80,6 +80,10 @@ int main()
     t4.output();
     cout << endl;
 
+    t4 = t1 + t2 + t3 + t1 + t2 + t3;
+    t4.output();
+    cout << endl;
+
     return 0;
 }
 
