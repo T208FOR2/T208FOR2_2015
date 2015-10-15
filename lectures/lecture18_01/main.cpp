@@ -10,10 +10,10 @@ public:
 
     void set_klst(int k);
     void set_minutur(int m);
-    int get_klst();
-    int get_minutur();
+    int get_klst() const;
+    int get_minutur() const;
 
-    void output();
+    void output() const;
 
     friend Timi addTimi(const Timi &t1, const Timi &t2);
 private:
@@ -31,7 +31,6 @@ Timi addTimi(const Timi &t1, const Timi &t2) {
     newtimi.klst = t1.klst + t2.klst;
     newtimi.fix_minutur();
     newtimi.fix_klst();
-    t1.output();
 
     return newtimi;
 }
@@ -111,10 +110,10 @@ void Timi::set_minutur(int m) {
     fix_klst();
 }
 
-int Timi::get_klst() {
+int Timi::get_klst() const {
     return klst;
 }
-int Timi::get_minutur() {
+int Timi::get_minutur() const {
     return minutur;
 }
 
@@ -138,7 +137,7 @@ void Timi::fix_klst() {
     }
 }
 
-void Timi::output() {
+void Timi::output() const {
     if (klst < 10) {
         cout << "0";
     }
