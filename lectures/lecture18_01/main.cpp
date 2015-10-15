@@ -31,7 +31,7 @@ Timi addTimi(const Timi &t1, const Timi &t2) {
     newtimi.klst = t1.klst + t2.klst;
     newtimi.fix_minutur();
     newtimi.fix_klst();
-    t1.minutur = -2342;
+    t1.output();
 
     return newtimi;
 }
