@@ -5,7 +5,7 @@ using namespace std;
 class Timi {
 public:
     Timi();
-//    Timi(int m);
+    Timi(int m);
     Timi(int k, int m);
 
     void set_klst(int k);
