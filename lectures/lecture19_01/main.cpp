@@ -6,6 +6,7 @@ class Numbers {
 public:
     Numbers();
 
+    friend ostream& operator << (ostream& outs, const Numbers &thenums);
 private:
     int n;  //Fjšldi staka
     int *p;  //Bendir ‡ fylki af n tšlum
@@ -24,6 +25,12 @@ Numbers::Numbers() {
 void Numbers::initializenumbers() {
     for (int i = 0; i < n; i++) {
         p[i] = i;
+    }
+}
+
+ostream& operator << (ostream& outs, const Numbers &thenums) {
+    for (int i = 0; i < thenums.n; i++) {
+        outs << thenums.p[i] << " ";
     }
 }
 
