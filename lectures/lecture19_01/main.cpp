@@ -9,6 +9,8 @@ public:
 
     Numbers(const Numbers &copyme);  // Copy constructor
 
+    //void operator = (const Numbers & sameasme); // Assignment operator
+
     friend ostream& operator << (ostream& outs, const Numbers &thenums);
 private:
     int n;  //Fjšldi staka
@@ -39,6 +41,11 @@ Numbers::Numbers(const Numbers &copyme) {
     }
 }
 
+/*
+void Numbers::operator = (const Numbers & sameasme) {
+    cout << "Assignment operator!" << endl;
+}
+*/
 void Numbers::initializenumbers() {
     for (int i = 0; i < n; i++) {
         p[i] = i;
@@ -64,7 +71,8 @@ int main()
     dummyfunction(thenumbers);
     cout << "Hi!" << endl;
 
-    Numbers thenumbers2 = thenumbers;
+    Numbers thenumbers2;
+    thenumbers2 = thenumbers;
     cout << thenumbers2 << endl;
 
     return 0;
