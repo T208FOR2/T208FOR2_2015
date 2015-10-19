@@ -34,30 +34,11 @@ private:
     void fix_klst();
 };
 
-istream& operator >> (istream& ins, Timi& t1) {
-    ins >> t1.klst >> t1.minutur;
-    return ins;
-}
-
-ostream& operator << (ostream& outs, const Timi& t1) {
-    if (t1.klst < 10) {
-        outs << "0";
-    }
-    outs << t1.klst;
-    outs << ":";
-    if (t1.minutur < 10) {
-        outs << "0";
-    }
-    outs << t1.minutur;
-
-    return outs;
-}
-
 
 // ------------------ MAIN ------------------
 int main()
 {
-    Timi t1, t2(13,101837); //, t3(186);
+    Timi t1, t2(13,101837), t3(186);
 
     t1.set_klst(13);
     t1.set_minutur(21);
@@ -66,16 +47,17 @@ int main()
     t1 = t1 + 20;
     cout << "Timinn t1 = " << t1 << endl;
 
-    return 0;
-
     cout << t2 << endl;
     cout << t3 << endl;
 
     t1.set_klst(908374);
     t1.set_minutur(-448934);
 
-    cout << t1;
-    cout << endl;
+    cout << t1 << endl;
+
+    cout << "Please write some time: ";
+    cin >> t1;
+    cout << "The time you wrote is: " << t1 << endl;
 
     cout << "----- adding time ------" << endl;
     Timi t4;
@@ -98,13 +80,30 @@ int main()
     return 0;
 }
 
-
-
-
-
 // -------------------------------
 // FUNCTIONS
 // -------------------------------
+
+istream& operator >> (istream& ins, Timi& t1) {
+    ins >> t1.klst >> t1.minutur;
+    t1.fix_minutur();
+    t1.fix_klst();
+    return ins;
+}
+
+ostream& operator << (ostream& outs, const Timi& t1) {
+    if (t1.klst < 10) {
+        outs << "0";
+    }
+    outs << t1.klst;
+    outs << ":";
+    if (t1.minutur < 10) {
+        outs << "0";
+    }
+    outs << t1.minutur;
+
+    return outs;
+}
 
 bool operator < (const Timi &t1, const Timi &t2) {
     return !(t1 >= t2);
