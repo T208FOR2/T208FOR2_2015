@@ -5,6 +5,7 @@ using namespace std;
 class Numbers {
 public:
     Numbers();
+    ~Numbers();  // Destructor
 
     friend ostream& operator << (ostream& outs, const Numbers &thenums);
 private:
@@ -20,6 +21,11 @@ Numbers::Numbers() {
     p = new int[n];
 
     initializenumbers();
+}
+
+Numbers::~Numbers() {
+    cout << "Destructor" << endl;
+    delete [] p;
 }
 
 void Numbers::initializenumbers() {
