@@ -41,7 +41,7 @@ ostream& operator << (ostream& outs, const Numbers &thenums) {
     return outs;
 }
 
-void dummyfunction(Numbers num) {
+void dummyfunction(Numbers &num) {
     cout << num << endl;
 }
 
