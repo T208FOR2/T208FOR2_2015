@@ -44,6 +44,16 @@ Numbers::Numbers(const Numbers &copyme) {
 void Numbers::operator = (const Numbers & sameasme) {
     cout << "Assignment operator!" << endl;
 
+    if (n != sameasme.n) {
+        delete [] p;
+
+        n = sameasme.n;
+        p = new int[n];
+    }
+
+    for (int i = 0; i < n; i++) {
+        p[i] = sameasme.p[i];
+    }
 }
 
 void Numbers::initializenumbers() {
