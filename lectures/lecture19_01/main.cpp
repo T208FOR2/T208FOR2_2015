@@ -7,6 +7,8 @@ public:
     Numbers();
     ~Numbers();  // Destructor
 
+    Numbers(const Numbers &copyme);  // Copy constructor
+
     friend ostream& operator << (ostream& outs, const Numbers &thenums);
 private:
     int n;  //Fjšldi staka
@@ -26,6 +28,11 @@ Numbers::Numbers() {
 Numbers::~Numbers() {
     cout << "Destructor" << endl;
     delete [] p;
+}
+
+Numbers::Numbers(const Numbers &copyme) {
+    cout << "Copy constructor!" << endl;
+
 }
 
 void Numbers::initializenumbers() {
