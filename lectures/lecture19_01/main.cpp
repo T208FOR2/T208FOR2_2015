@@ -32,7 +32,11 @@ Numbers::~Numbers() {
 
 Numbers::Numbers(const Numbers &copyme) {
     cout << "Copy constructor!" << endl;
-
+    n = copyme.n;
+    p = new int[n];
+    for (int i = 0; i < n; i++) {
+        p[i] = copyme.p[i];
+    }
 }
 
 void Numbers::initializenumbers() {
