@@ -64,5 +64,8 @@ int main()
     dummyfunction(thenumbers);
     cout << "Hi!" << endl;
 
+    Numbers thenumbers2 = thenumbers;
+    cout << thenumbers2 << endl;
+
     return 0;
 }
