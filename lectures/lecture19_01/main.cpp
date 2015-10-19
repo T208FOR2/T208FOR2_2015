@@ -50,6 +50,8 @@ int main()
     Numbers thenumbers;
 
     cout << thenumbers << endl;
+    dummyfunction(thenumbers);
+    cout << "Hi!" << endl;
 
     return 0;
 }
