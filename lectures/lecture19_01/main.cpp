@@ -21,7 +21,7 @@ Numbers::Numbers() {
     initializenumbers();
 }
 
-void Numbers::initalizenumbers() {
+void Numbers::initializenumbers() {
     for (int i = 0; i < n; i++) {
         p[i] = i;
     }
@@ -30,6 +30,8 @@ void Numbers::initalizenumbers() {
 int main()
 {
     Numbers thenumbers;
+
+    cout << thenumbers << endl;
 
     return 0;
 }
