@@ -32,6 +32,7 @@ ostream& operator << (ostream& outs, const Numbers &thenums) {
     for (int i = 0; i < thenums.n; i++) {
         outs << thenums.p[i] << " ";
     }
+    return outs;
 }
 
 int main()
