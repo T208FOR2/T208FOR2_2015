@@ -16,6 +16,8 @@ namespace beta {
         }
         cout << endl;
     }
+
+    void reverseprint(Numbers num);
 }
 
 int main() {
@@ -35,4 +37,12 @@ int main() {
     return 0;
 }
 
+namespace beta {
+    void reverseprint(Numbers num) {
+        for (int i = num.getsize() - 1; i >= 0; i--) {
+            cout << num[i] << " ";
+        }
+        cout << endl;
+    }
+}
 
