@@ -20,11 +20,17 @@ namespace beta {
     void reverseprint(Numbers num);
 }
 
+void prentastuff(string &texti) {
+    cout << texti << endl;
+}
+
 int main() {
     using namespace stable;
     using namespace beta;
 
     Numbers thenumbers;
+
+    prentastuff("testing");
 
     for (int j = 0; j < 100; j++)
     {
