@@ -3,16 +3,19 @@
 
 using namespace std;
 
-
-void dummyfunction(Numbers num) {
-    cout << num << endl;
+namespace stable {
+    void dummyfunction(Numbers num) {
+        cout << num << endl;
+    }
 }
 
-void dummyfunction2(Numbers num) {
-    for (int i = 0; i < num.getsize(); i++) {
-        cout << num[i] << endl;
+namespace beta {
+    void dummyfunction(Numbers num) {
+        for (int i = 0; i < num.getsize(); i++) {
+            cout << num[i] << endl;
+        }
+        cout << endl;
     }
-    cout << endl;
 }
 
 int main() {
