@@ -1,3 +1,5 @@
+#include <iostream>
+#include <cstdlib>
 #include "Numbers.h"
 
 int mymax(int a, int b) {
