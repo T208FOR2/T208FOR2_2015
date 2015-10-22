@@ -8,6 +8,13 @@ void dummyfunction(Numbers num) {
     cout << num << endl;
 }
 
+void dummyfunction2(Numbers num) {
+    for (int i = 0; i < num.getsize(); i++) {
+        cout << num[i] << endl;
+    }
+    cout << endl;
+}
+
 int main() {
     Numbers thenumbers;
 

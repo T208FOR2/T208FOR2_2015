@@ -19,7 +19,7 @@ public:
 
   void add(int tala);
   void setsize(int newsize);
-  int size() const {return n;};
+  int getsize() const {return n;};
 
   friend Numbers operator + (const Numbers &lhs, const Numbers &rhs);
   friend Numbers operator + (const Numbers &lhs, int tala);
