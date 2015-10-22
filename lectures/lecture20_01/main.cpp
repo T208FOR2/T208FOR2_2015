@@ -22,6 +22,7 @@ namespace beta {
 
 int main() {
     using namespace stable;
+    using namespace beta;
 
     Numbers thenumbers;
 
@@ -31,6 +32,7 @@ int main() {
     }
 
     beta::dummyfunction(thenumbers);
+    reverseprint(thenumbers);
 
     cout << "Hi!" << endl;
 

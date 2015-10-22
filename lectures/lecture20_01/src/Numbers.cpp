@@ -2,6 +2,7 @@
 #include <cstdlib>
 #include "Numbers.h"
 
+namespace {
 int mymax(int a, int b) {
   if (a > b) {
     return a;
@@ -18,6 +19,7 @@ int mymin(int a, int b) {
   else {
     return b;
   }
+}
 }
 
 Numbers::Numbers() {
