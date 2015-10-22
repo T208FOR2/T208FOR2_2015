@@ -19,6 +19,8 @@ namespace beta {
 }
 
 int main() {
+    using namespace stable;
+
     Numbers thenumbers;
 
     for (int j = 0; j < 100; j++)
@@ -26,7 +28,7 @@ int main() {
         thenumbers.add(j);
     }
 
-    dummyfunction(thenumbers);
+    beta::dummyfunction(thenumbers);
 
     cout << "Hi!" << endl;
 
