@@ -1,6 +1,11 @@
 #ifndef NUMBERS_H
 #define NUMBERS_H
 
+#include <iostream>
+#include <cstdlib>
+
+using namespace std;
+
 class Numbers {
 public:
   Numbers();   // Constructor
