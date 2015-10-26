@@ -34,6 +34,11 @@ int main()
         currentlink = currentlink->next;
     }
 
+    currentlink = searchlinkedlist(head, 4);
+    if (currentlink != NULL) {
+        cout << "I found it!: " << currentlink->data << endl;
+    }
+
     return 0;
 }
 
