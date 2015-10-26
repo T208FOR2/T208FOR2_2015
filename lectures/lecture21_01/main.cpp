@@ -26,9 +26,11 @@ int main()
         head = newlink;
     }
 
-
-
-    cout << newlink->data << endl;
+    currentlink = head;
+    while (currentlink != NULL) {
+        cout << currentlink->data << endl;
+        currentlink = currentlink->next;
+    }
 
     return 0;
 }
