@@ -11,7 +11,7 @@ int main()
 {
     int n = 10;
     Node *head = NULL;
-    Node *newlink;
+    Node *newlink, *currentlink;
 
     newlink = new Node;
     //(*newlink).data = 42;
@@ -25,6 +25,7 @@ int main()
         newlink->next = head;
         head = newlink;
     }
+
 
 
     cout << newlink->data << endl;
