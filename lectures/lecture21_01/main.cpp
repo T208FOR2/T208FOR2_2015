@@ -13,11 +13,12 @@ int main()
     Node *newlink;
 
     newlink = new Node;
-    (*newlink).data = 42;
+    //(*newlink).data = 42;
+    newlink->data = 42;  // -> is the same as (*   ).
 
     head = newlink;
 
-    cout << (*newlink).data << endl;
+    cout << newlink->data << endl;
 
     return 0;
 }
