@@ -65,5 +65,6 @@ void insertintolinkedlist(Node* afterme, int value) {
     Node *newnode = new Node;
     newnode->data = value;
 
-
+    newnode->next = afterme->next;
+    afterme->next = newnode;
 }
