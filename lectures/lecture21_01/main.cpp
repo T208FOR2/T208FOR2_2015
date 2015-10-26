@@ -8,6 +8,7 @@ struct Node {
 };
 
 Node* searchlinkedlist(Node* head, int value);
+void insertintolinkedlist(Node* afterme, int value);
 
 int main()
 {
@@ -58,4 +59,11 @@ Node* searchlinkedlist(Node* head, int value) {
     else {
         return NULL;
     }
+}
+
+void insertintolinkedlist(Node* afterme, int value) {
+    Node *newnode = new Node;
+    newnode->data = value;
+
+
 }
