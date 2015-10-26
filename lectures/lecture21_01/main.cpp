@@ -9,6 +9,7 @@ struct Node {
 
 Node* searchlinkedlist(Node* head, int value);
 void insertintolinkedlist(Node* afterme, int value);
+void removefromlinkedlist(Node* before);
 
 int main()
 {
@@ -76,3 +77,10 @@ void insertintolinkedlist(Node* afterme, int value) {
     newnode->next = afterme->next;
     afterme->next = newnode;
 }
+
+void removefromlinkedlist(Node* before) {
+    Node* deleteme = before->next;
+    before->next = before->next->next;
+    delete deleteme;
+}
+
