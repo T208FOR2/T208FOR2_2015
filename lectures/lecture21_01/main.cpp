@@ -35,9 +35,17 @@ int main()
         currentlink = currentlink->next;
     }
 
+    cout << "-------------------" << endl;
+
     currentlink = searchlinkedlist(head, 4);
     if (currentlink != NULL) {
-        cout << "I found it!: " << currentlink->data << endl;
+        insertintolinkedlist(currentlink, 444);
+    }
+
+    currentlink = head;
+    while (currentlink != NULL) {
+        cout << currentlink->data << endl;
+        currentlink = currentlink->next;
     }
 
     return 0;
