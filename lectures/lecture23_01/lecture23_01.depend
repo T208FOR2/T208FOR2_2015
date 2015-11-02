@@ -1,0 +1,15 @@
+# depslib dependency file v1.0
+1446458540 source:/Users/Eyjo/Programming/T-208-FOR2/Haust2015/T208FOR2_2015/lectures/lecture23_01/src/Person.cpp
+	<iostream>
+	<string>
+	"Person.h"
+
+1446457892 /Users/Eyjo/Programming/T-208-FOR2/Haust2015/T208FOR2_2015/lectures/lecture23_01/include/Person.h
+	<iostream>
+	<string>
+
+1446458514 source:/Users/Eyjo/Programming/T-208-FOR2/Haust2015/T208FOR2_2015/lectures/lecture23_01/main.cpp
+	<iostream>
+	<string>
+	"Person.h"
+
