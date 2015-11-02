@@ -87,6 +87,7 @@ void Person::deleteFamilyTree(Person* deleteme) {
     Person* tmp;
     while (firstChild != NULL) {
         tmp = firstChild;
+        //cout << "preparing to delete " << tmp->m_name << endl;
         removeChild(firstChild);
 
         deleteFamilyTree(tmp);
@@ -111,15 +112,14 @@ void Person::addChild(Person* newchild) {
 }
 
 void Person::removeChild(Person* remchild) {
-    if (firstChild == remchild)
+    if (remchild->prevSibling == NULL)
         firstChild = firstChild->nextSibling;
-    if (lastChild == remchild)
-        lastChild = remchild->prevSibling;
-
-    if (remchild->prevSibling != NULL)
+    else
         remchild->prevSibling->nextSibling = remchild->nextSibling;
 
-    if (remchild->nextSibling != NULL)
+    if (remchild->nextSibling == NULL)
+        lastChild = remchild->prevSibling;
+    else
         remchild->nextSibling->prevSibling = remchild->prevSibling;
 
     remchild->parent = NULL;
