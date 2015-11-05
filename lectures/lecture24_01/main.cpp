@@ -7,11 +7,15 @@ using namespace std;
 int main()
 {
     unsigned int pos;
-    string tmp = "Hellothere!";
+    string tmp = "Hello...there!";
 
-    pos = tmp.find_first_of("lol");
+    pos = tmp.find_first_of("'.!?\n\t \"");
+    while (pos < tmp.length()) {
+        tmp[pos] = '?';
+        pos = tmp.find_first_of("'.!?\n\t \"",pos+1);
+    }
 
-    cout << pos << endl;
+    cout << tmp << endl;
 
     return 0;
 }
