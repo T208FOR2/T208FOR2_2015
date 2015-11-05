@@ -3,12 +3,13 @@
 
 using namespace std;
 
-void printstring(string s) {
+void printstring(string &s) {
     cout << s << endl;
 }
 
 int main()
 {
-    printstring("Hellothere!");
+    string tmp = "Hellothere!";
+    printstring(tmp);
     return 0;
 }
