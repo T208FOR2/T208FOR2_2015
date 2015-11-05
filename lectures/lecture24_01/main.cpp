@@ -3,13 +3,15 @@
 
 using namespace std;
 
-void printstring(string s) {
-    cout << s << endl;
-}
 
 int main()
 {
+    unsigned int pos;
     string tmp = "Hellothere!";
-    printstring(tmp);
+
+    pos = tmp.find_first_of("lol");
+
+    cout << pos << endl;
+
     return 0;
 }
