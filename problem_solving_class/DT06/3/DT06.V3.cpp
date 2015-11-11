@@ -52,6 +52,8 @@ int main()
         delete [] array[i];
     }
     delete [] array;
+
+    delete[] maxRowsArr;
     
     return 0;
 }
